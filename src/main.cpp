@@ -27,8 +27,8 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "xbmc/xbmc_scr_dll.h"
-#include "xbmc/libXBMC_addon.h"
+#include "xbmc_scr_dll.h"
+#include "libXBMC_addon.h"
 #include <GL/gl.h>
 #include "main.h"
 #include "matrixtrails.h"
