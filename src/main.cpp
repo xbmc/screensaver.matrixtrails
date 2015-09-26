@@ -71,7 +71,7 @@ ADDON_STATUS ADDON_Create(void* hdl, void* props)
   gRender.m_Width = scrprops->width;
   gRender.m_Height = scrprops->height;
 
-  return ADDON_STATUS_OK;
+  return ADDON_STATUS_NEED_SETTINGS;
 }
 
 ////////////////////////////////////////////////////////////////////////////
