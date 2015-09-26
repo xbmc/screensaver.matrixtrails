@@ -150,9 +150,9 @@ ADDON_STATUS ADDON_SetSetting(const char *strSetting, const void *value)
   if (strcmp(strSetting, "chars") == 0)
     gConfig.m_NumChars = *(int*)value;
   if (strcmp(strSetting,"charsizex") == 0)
-     gConfig.m_CharSizeTex.x = (*(float*)value)/TEXTURESIZE;
+     gConfig.m_CharSizeTex.x = (*(float*)value);
   if (strcmp(strSetting,"charsizey") == 0)
-     gConfig.m_CharSizeTex.y = (*(float*)value)/TEXTURESIZE;
+     gConfig.m_CharSizeTex.y = (*(float*)value);
 
   return ADDON_STATUS_OK;
 }
