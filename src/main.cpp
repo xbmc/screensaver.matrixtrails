@@ -147,8 +147,6 @@ ADDON_STATUS ADDON_SetSetting(const char *strSetting, const void *value)
     gConfig.m_NumColumns = *(int*)value;
   if (strcmp(strSetting, "rows") == 0)
     gConfig.m_NumRows = *(int*)value;
-  if (strcmp(strSetting, "chars") == 0)
-    gConfig.m_NumChars = *(int*)value;
 
   return ADDON_STATUS_OK;
 }

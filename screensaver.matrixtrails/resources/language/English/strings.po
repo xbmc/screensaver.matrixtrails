@@ -19,7 +19,3 @@ msgstr ""
 msgctxt "#30001"
 msgid "Number of rows"
 msgstr ""
-
-msgctxt "#30002"
-msgid "Number of characters"
-msgstr ""

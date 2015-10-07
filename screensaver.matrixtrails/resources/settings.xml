@@ -1,5 +1,4 @@
 <settings>
   <setting id="columns"   label="30000" type="slider" option="int" range="1,1,200" default="50"/>
   <setting id="rows"      label="30001" type="slider" option="int" range="1,1,200" default="30"/>
-  <setting id="chars"     label="30002" type="slider" option="int" range="1,1,100" default="32"/>
 </settings>
