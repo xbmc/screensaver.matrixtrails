@@ -23,11 +23,3 @@ msgstr ""
 msgctxt "#30002"
 msgid "Number of characters"
 msgstr ""
-
-msgctxt "#30003"
-msgid "Max character width"
-msgstr ""
-
-msgctxt "#30004"
-msgid "Max character height"
-msgstr ""
