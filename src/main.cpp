@@ -179,7 +179,7 @@ void	CConfig::SetDefaults()
 	m_NumRows		= 40;
 	m_CharCol.Set(0.0f, 1.0f, 0.0f, 1.0f);
 
-	m_NumChars		= 64;
+	m_NumChars		= 32;
 	m_CharSizeTex.x = 32.0/TEXTURESIZE;
 	m_CharSizeTex.y = 26.0f/TEXTURESIZE;
 }
