@@ -146,13 +146,9 @@ ADDON_STATUS ADDON_SetSetting(const char *strSetting, const void *value)
   if (strcmp(strSetting, "columns") == 0)
     gConfig.m_NumColumns = *(int*)value;
   if (strcmp(strSetting, "rows") == 0)
-    gConfig.m_NumColumns = *(int*)value;
+    gConfig.m_NumRows = *(int*)value;
   if (strcmp(strSetting, "chars") == 0)
     gConfig.m_NumChars = *(int*)value;
-  if (strcmp(strSetting,"charsizex") == 0)
-     gConfig.m_CharSizeTex.x = (*(float*)value);
-  if (strcmp(strSetting,"charsizey") == 0)
-     gConfig.m_CharSizeTex.y = (*(float*)value);
 
   return ADDON_STATUS_OK;
 }
