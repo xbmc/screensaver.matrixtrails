@@ -1,0 +1,1 @@
+SOIL http://archive.ubuntu.com/ubuntu/pool/universe/libs/libsoil/libsoil_1.07~20080707.dfsg.orig.tar.gz
