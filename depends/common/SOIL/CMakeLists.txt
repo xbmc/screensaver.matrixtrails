@@ -12,5 +12,5 @@ ExternalProject_Add(SOIL
                     BUILD_IN_SOURCE 1
                     )
 
-install(FILES ${PROJECT_SOURCE_DIR}/src/SOIL.h DESTINATION include)
+install(FILES ${PROJECT_SOURCE_DIR}/src/SOIL.h DESTINATION include/SOIL)
 install(FILES ${PROJECT_SOURCE_DIR}/src/libSOIL.a DESTINATION lib)
