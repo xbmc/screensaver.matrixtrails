@@ -1,4 +1,4 @@
-find_path(SOIL_INCLUDE_DIRS SOIL.h PATH_SUFFIXES SOIL)
+find_path(SOIL_INCLUDE_DIRS SOIL/SOIL.h)
 find_library(SOIL_LIBRARIES NAMES SOIL)
 
 include(FindPackageHandleStandardArgs)
