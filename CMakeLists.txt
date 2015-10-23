@@ -12,7 +12,7 @@ find_package(SOIL REQUIRED)
 include(ExternalProject)
 
 include_directories(${KODI_INCLUDE_DIR}
-                    ${SOIL_INCLUDE_DIR})
+                    ${SOIL_INCLUDE_DIRS})
 
 set(MATRIXTRAILS_SOURCES src/column.cpp
                          src/main.cpp
