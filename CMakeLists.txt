@@ -18,7 +18,7 @@ set(MATRIXTRAILS_SOURCES src/column.cpp
                          src/main.cpp
                          src/matrixtrails.cpp)
 
-set(DEPLIBS ${SOIL_LIBRARIES})
+set(DEPLIBS ${SOIL_LIBRARY})
 
 build_addon(screensaver.matrixtrails MATRIXTRAILS DEPLIBS)
 
