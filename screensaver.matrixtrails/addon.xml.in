@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="screensaver.matrixtrails"
-  version="1.0.0"
+  version="1.1.0"
   name="Matrix trails"
   provider-name="spiff">
   <requires>
@@ -9,11 +9,10 @@
   </requires>
   <extension
     point="xbmc.ui.screensaver"
-    library_linux="screensaver.matrixtrails.so"
-    library_osx="screensaver.matrixtrails.dylib"/>
+    library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
     <summary>Matrix trails screensaver</summary>
     <description>Matrix trails screensaver</description>
-    <platform>linux osx</platform>
+    <platform>@PLATFORM@</platform>
   </extension>
 </addon>
