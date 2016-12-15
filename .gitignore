@@ -4,6 +4,8 @@
 .libs
 .project
 
+screensaver.*/addon.xml
+
 .dummy
 .dummy.in
 
