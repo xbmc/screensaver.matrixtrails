@@ -131,16 +131,6 @@ ADDON_STATUS ADDON_GetStatus()
   return ADDON_STATUS_OK;
 }
 
-bool ADDON_HasSettings()
-{
-  return false;
-}
-
-unsigned int ADDON_GetSettings(ADDON_StructSetting ***sSet)
-{
-  return 0;
-}
-
 ADDON_STATUS ADDON_SetSetting(const char *strSetting, const void *value)
 {
   if (strcmp(strSetting, "columns") == 0)
@@ -149,14 +139,6 @@ ADDON_STATUS ADDON_SetSetting(const char *strSetting, const void *value)
     gConfig.m_NumRows = *(int*)value;
 
   return ADDON_STATUS_OK;
-}
-
-void ADDON_FreeSettings()
-{
-}
-
-void ADDON_Announce(const char *flag, const char *sender, const char *message, const void *data)
-{
 }
 
 ////////////////////////////////////////////////////////////////////////////
