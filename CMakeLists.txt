@@ -18,6 +18,13 @@ set(MATRIXTRAILS_SOURCES src/column.cpp
                          src/main.cpp
                          src/matrixtrails.cpp)
 
+set(MATRIXTRAILS_HEADERS src/column.h
+                         src/main.h
+                         src/matrixtrails.h
+                         src/Texture.h
+                         src/timer.h
+                         src/types.h)
+
 set(DEPLIBS ${SOIL_LIBRARIES})
 
 build_addon(screensaver.matrixtrails MATRIXTRAILS DEPLIBS)

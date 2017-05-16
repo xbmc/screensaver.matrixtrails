@@ -1,12 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="screensaver.matrixtrails"
-  version="1.2.1"
+  version="1.2.2"
   name="Matrix trails"
   provider-name="spiff">
-  <requires>
-    <c-pluff version="0.1"/>
-  </requires>
+  <requires>@ADDON_DEPENDS@</requires>
   <extension
     point="xbmc.ui.screensaver"
     library_@PLATFORM@="@LIBRARY_FILENAME@"/>
