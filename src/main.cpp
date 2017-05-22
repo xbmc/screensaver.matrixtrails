@@ -65,7 +65,7 @@ ADDON_STATUS ADDON_Create(void* hdl, void* props)
     return ADDON_STATUS_PERMANENT_FAILURE;
   }
 
-  SCR_PROPS* scrprops = (SCR_PROPS*)props;
+  AddonProps_Screensaver* scrprops = (AddonProps_Screensaver*)props;
 
   gConfig.SetDefaults();
   gRender.m_Width = scrprops->width;
@@ -92,7 +92,7 @@ extern "C" void Start()
         p2 += "/resources/MatrixTrails.tga";
 
 	if (!gMatrixTrails->RestoreDevice(&gRender, p2.c_str()))
-		ADDON_Stop();
+		Stop();
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -113,7 +113,7 @@ extern "C" void Render()
 // XBMC tells us to stop the screensaver we should free any memory and release
 // any resources we have created.
 //
-extern "C" void ADDON_Stop()
+extern "C" void Stop()
 {
 	if (!gMatrixTrails)
 		return;
