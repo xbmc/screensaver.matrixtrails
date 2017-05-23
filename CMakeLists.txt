@@ -11,7 +11,7 @@ find_package(SOIL REQUIRED)
 
 include(ExternalProject)
 
-include_directories(${KODI_INCLUDE_DIR}
+include_directories(${KODI_INCLUDE_DIR}/.. # Hack way with "/..", need bigger Kodi cmake rework to match right include ways
                     ${SOIL_INCLUDE_DIRS})
 
 set(MATRIXTRAILS_SOURCES src/column.cpp

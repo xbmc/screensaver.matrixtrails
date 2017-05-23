@@ -27,118 +27,98 @@
 //
 ////////////////////////////////////////////////////////////////////////////
 
-#include "xbmc_scr_dll.h"
-#include "libXBMC_addon.h"
-#include <GL/gl.h>
 #include "main.h"
 #include "matrixtrails.h"
 #include "timer.h"
+
+#include <kodi/addon-instance/Screensaver.h>
+#include <GL/gl.h>
 #include <time.h>
 #include <iostream>
-
-CMatrixTrails*	gMatrixTrails = null;
-CRenderD3D		gRender;
-CTimer*			gTimer = null;
-CConfig			gConfig;
-
-ADDON::CHelper_libXBMC_addon *XBMC           = NULL;
-
 #include <string.h>
 
-#define TEXTURESIZE		256				// Width & height of the texture we are using
+#define TEXTURESIZE 256  // Width & height of the texture we are using
+
+class CScreensaverMatrixTrails
+  : public kodi::addon::CAddonBase,
+    public kodi::addon::CInstanceScreensaver
+{
+public:
+  CScreensaverMatrixTrails();
+
+  virtual bool Start() override;
+  virtual void Stop() override;
+  virtual void Render() override;
+
+private:
+  CMatrixTrails* m_matrixTrails;
+  CTimer* m_timer;
+  CRenderD3D m_render;
+  CConfig m_config;
+};
 
 ////////////////////////////////////////////////////////////////////////////
-// XBMC has loaded us into memory, we should set our core values
+// Kodi has loaded us into memory, we should set our core values
 // here and load any settings we may have from our config file
 //
-ADDON_STATUS ADDON_Create(void* hdl, void* props)
+CScreensaverMatrixTrails::CScreensaverMatrixTrails()
+  : m_matrixTrails(nullptr),
+    m_timer(nullptr)
 {
-  if (!props)
-    return ADDON_STATUS_UNKNOWN;
+  m_render.m_Width = Width();
+  m_render.m_Height = Height();
 
-  if (!XBMC)
-    XBMC = new ADDON::CHelper_libXBMC_addon;
+  m_config.SetDefaults();
+  m_config.m_NumColumns = kodi::GetSettingInt("columns");
+  m_config.m_NumRows = kodi::GetSettingInt("rows");
+}
 
-  if (!XBMC->RegisterMe(hdl))
+////////////////////////////////////////////////////////////////////////////
+// Kodi tells us we should get ready to start rendering. This function
+// is called once when the screensaver is activated by Kodi.
+//
+bool CScreensaverMatrixTrails::Start()
+{
+  srand((u32)time(null));
+  m_matrixTrails = new CMatrixTrails(&m_config);
+  if (!m_matrixTrails)
+    return false;
+  m_timer = new CTimer();
+  m_timer->Init();
+  std::string path = kodi::GetAddonPath() + "/resources/MatrixTrails.tga";
+  if (!m_matrixTrails->RestoreDevice(&m_render, path.c_str()))
   {
-    delete XBMC, XBMC=NULL;
-    return ADDON_STATUS_PERMANENT_FAILURE;
+    Stop();
+    return false;
   }
-
-  AddonProps_Screensaver* scrprops = (AddonProps_Screensaver*)props;
-
-  gConfig.SetDefaults();
-  gRender.m_Width = scrprops->width;
-  gRender.m_Height = scrprops->height;
-
-  return ADDON_STATUS_NEED_SETTINGS;
+  return true;
 }
 
 ////////////////////////////////////////////////////////////////////////////
-// XBMC tells us we should get ready to start rendering. This function
-// is called once when the screensaver is activated by XBMC.
-//
-extern "C" void Start()
-{
-	srand((u32)time(null));
-	gMatrixTrails = new CMatrixTrails();
-	if (!gMatrixTrails)
-		return;
-	gTimer = new CTimer();
-	gTimer->Init();
-        char path[1024];
-        XBMC->GetSetting("__addonpath__", path);
-        std::string p2(path);
-        p2 += "/resources/MatrixTrails.tga";
-
-	if (!gMatrixTrails->RestoreDevice(&gRender, p2.c_str()))
-		Stop();
-}
-
-////////////////////////////////////////////////////////////////////////////
-// XBMC tells us to render a frame of our screensaver. This is called on
-// each frame render in XBMC, you should render a single frame only - the DX
-// device will already have been cleared.
-//
-extern "C" void Render()
-{
-	if (!gMatrixTrails)
-		return;
-	gTimer->Update();
-	gMatrixTrails->Update(gTimer->GetDeltaTime());
-	gMatrixTrails->Draw(&gRender);
-}
-
-////////////////////////////////////////////////////////////////////////////
-// XBMC tells us to stop the screensaver we should free any memory and release
+// Kodi tells us to stop the screensaver we should free any memory and release
 // any resources we have created.
 //
-extern "C" void Stop()
+void CScreensaverMatrixTrails::Stop()
 {
-	if (!gMatrixTrails)
-		return;
-	gMatrixTrails->InvalidateDevice(&gRender);
-	SAFE_DELETE(gMatrixTrails);
-	SAFE_DELETE(gTimer);
+  if (!m_matrixTrails)
+    return;
+  m_matrixTrails->InvalidateDevice(&m_render);
+  SAFE_DELETE(m_matrixTrails);
+  SAFE_DELETE(m_timer);
 }
 
-void ADDON_Destroy()
+////////////////////////////////////////////////////////////////////////////
+// Kodi tells us to render a frame of our screensaver. This is called on
+// each frame render in Kodi, you should render a single frame only - the DX
+// device will already have been cleared.
+//
+void CScreensaverMatrixTrails::Render()
 {
-}
-
-ADDON_STATUS ADDON_GetStatus()
-{
-  return ADDON_STATUS_OK;
-}
-
-ADDON_STATUS ADDON_SetSetting(const char *strSetting, const void *value)
-{
-  if (strcmp(strSetting, "columns") == 0)
-    gConfig.m_NumColumns = *(int*)value;
-  if (strcmp(strSetting, "rows") == 0)
-    gConfig.m_NumRows = *(int*)value;
-
-  return ADDON_STATUS_OK;
+  if (!m_matrixTrails)
+    return;
+  m_timer->Update();
+  m_matrixTrails->Update(m_timer->GetDeltaTime());
+  m_matrixTrails->Draw(&m_render);
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -147,17 +127,19 @@ ADDON_STATUS ADDON_SetSetting(const char *strSetting, const void *value)
 
 ////////////////////////////////////////////////////////////////////////////
 //
-void	CConfig::SetDefaults()
+void CConfig::SetDefaults()
 {
-	m_CharDelayMin	= 0.015f;
-	m_CharDelayMax	= 0.060f;
-	m_FadeSpeedMin	= 1.0f;
-	m_FadeSpeedMax	= 1.5f;
-	m_NumColumns	= 200;
-	m_NumRows		= 40;
-	m_CharCol.Set(0.0f, 1.0f, 0.0f, 1.0f);
+  m_CharDelayMin = 0.015f;
+  m_CharDelayMax = 0.060f;
+  m_FadeSpeedMin = 1.0f;
+  m_FadeSpeedMax = 1.5f;
+  m_NumColumns = 200;
+  m_NumRows = 40;
+  m_CharCol.Set(0.0f, 1.0f, 0.0f, 1.0f);
 
-	m_NumChars		= 32;
-	m_CharSizeTex.x = 32.0/TEXTURESIZE;
-	m_CharSizeTex.y = 26.0f/TEXTURESIZE;
+  m_NumChars = 32;
+  m_CharSizeTex.x = 32.0/TEXTURESIZE;
+  m_CharSizeTex.y = 26.0f/TEXTURESIZE;
 }
+
+ADDONCREATOR(CScreensaverMatrixTrails);

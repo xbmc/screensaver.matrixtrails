@@ -20,20 +20,20 @@
 class CConfig
 {
 public:
-	int				m_NumColumns;		// Number of character columns
-	int				m_NumRows;			// Number of character rows
+  int m_NumColumns; // Number of character columns
+  int m_NumRows; // Number of character rows
 
-	CRGBA			m_CharCol;
-	f32				m_FadeSpeedMin;		// How quickly the characters fade out
-	f32				m_FadeSpeedMax;
-	f32				m_CharDelayMin;		// How long we wait before we add a new char
-	f32				m_CharDelayMax;
+  CRGBA m_CharCol;
+  f32 m_FadeSpeedMin; // How quickly the characters fade out
+  f32 m_FadeSpeedMax;
+  f32 m_CharDelayMin; // How long we wait before we add a new char
+  f32 m_CharDelayMax;
 
-	CVector2		m_CharSizeTex;		// Size of the characters in the texture
-	int				m_NumChars;			// Number of characters in the texture
+  CVector2 m_CharSizeTex; // Size of the characters in the texture
+  int m_NumChars; // Number of characters in the texture
 
-	void			SetDefaults();
-	void			LoadSettings();
+  void SetDefaults();
+  void LoadSettings();
 };
 
 
@@ -42,13 +42,7 @@ public:
 class CRenderD3D
 {
 public:
-	int			m_Width;
-	int			m_Height;
+ int m_Width;
+ int m_Height;
 
 };
-
-/***************************** G L O B A L S *******************************/
-
-extern	CConfig		gConfig;
-
-/***************************** I N L I N E S *******************************/
