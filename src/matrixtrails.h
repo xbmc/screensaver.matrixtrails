@@ -16,12 +16,12 @@
 
 ////////////////////////////////////////////////////////////////////////////
 //
-typedef	struct	TRenderVertex
+typedef struct TRenderVertex
 {
-	CVector		pos;
-	f32			w;
-	float col[4];
-	f32			u, v;
+  CVector pos;
+  f32 w;
+  float col[4];
+  f32 u, v;
 } TRenderVertex;
 
 ////////////////////////////////////////////////////////////////////////////
@@ -29,20 +29,23 @@ typedef	struct	TRenderVertex
 class CMatrixTrails
 {
 public:
-					CMatrixTrails();
-					~CMatrixTrails();
-	bool			RestoreDevice(CRenderD3D* render, const char* path);
-	void			InvalidateDevice(CRenderD3D* render);
-	void			Update(f32 dt);
-	bool			Draw(CRenderD3D* render);
+  CMatrixTrails(CConfig* config);
+  ~CMatrixTrails();
+  bool RestoreDevice(CRenderD3D* render, const char* path);
+  void InvalidateDevice(CRenderD3D* render);
+  void Update(f32 dt);
+  bool Draw(CRenderD3D* render);
 
 protected:
-	int				m_NumColumns;
-	int				m_NumRows;
-	CColumn*		m_Columns;
-	CVector			m_CharSize, m_CharSizeTex;
+  int m_NumColumns;
+  int m_NumRows;
+  CColumn* m_Columns;
+  CVector m_CharSize, m_CharSizeTex;
 
-        GLuint m_Texture;
+  GLuint m_Texture;
+
+private:
+  CConfig* m_config;
 };
 
 /***************************** I N L I N E S *******************************/
