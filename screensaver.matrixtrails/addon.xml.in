@@ -12,5 +12,12 @@
     <summary>Matrix trails screensaver</summary>
     <description>Matrix trails screensaver</description>
     <platform>@PLATFORM@</platform>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+      <screenshot>resources/screenshot-01.png</screenshot>
+      <screenshot>resources/screenshot-02.png</screenshot>
+      <screenshot>resources/screenshot-01.png</screenshot>
+    </assets>
   </extension>
 </addon>
