@@ -24,10 +24,12 @@ public:
   void Init(void);
   void Update(void);
   f32 GetDeltaTime(void);
+  void SetSpeed(f32 speed);
 
 protected:
   double m_OldCount;
   f32 m_DeltaTime;
+  f32 m_speed;
 
   static double WallTime ()
   {
@@ -45,6 +47,7 @@ protected:
 inline CTimer::CTimer()
 {
   m_DeltaTime = 0.0f;
+  m_speed = 1.0f;
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -58,7 +61,7 @@ inline void  CTimer::Init(void)
 //
 inline void  CTimer::Update(void)
 {
-  m_DeltaTime = WallTime()-m_OldCount;
+  m_DeltaTime = (WallTime()-m_OldCount)*m_speed;
   m_OldCount = WallTime();
 }
 
@@ -67,4 +70,11 @@ inline void  CTimer::Update(void)
 inline f32    CTimer::GetDeltaTime(void)
 {
   return m_DeltaTime;
+}
+
+////////////////////////////////////////////////////////////////////////////
+//
+void CTimer::SetSpeed(f32 speed)
+{
+  m_speed = speed;
 }

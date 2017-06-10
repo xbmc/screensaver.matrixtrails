@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="screensaver.matrixtrails"
-  version="2.0.0"
+  version="2.1.0"
   name="Matrix trails"
   provider-name="spiff">
   <requires>@ADDON_DEPENDS@</requires>
@@ -10,7 +10,14 @@
     library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
     <summary>Matrix trails screensaver</summary>
-    <description>Matrix trails screensaver</description>
+    <description>The "digital rain" effect, as seen on the computer monitors in "The Matrix".</description>
     <platform>@PLATFORM@</platform>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+      <screenshot>resources/screenshot-01.png</screenshot>
+      <screenshot>resources/screenshot-02.png</screenshot>
+      <screenshot>resources/screenshot-01.png</screenshot>
+    </assets>
   </extension>
 </addon>
