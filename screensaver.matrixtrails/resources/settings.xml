@@ -1,4 +1,27 @@
-<settings>
-  <setting id="columns"   label="30000" type="slider" option="int" range="1,1,200" default="50"/>
-  <setting id="rows"      label="30001" type="slider" option="int" range="1,1,200" default="30"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<settings version="1">
+  <section id="addon" label="0" help="0">
+    <category id="main" label="128" help="0">
+      <group id="1" label="0">
+        <setting id="columns" type="integer" label="30000" help="0">
+          <default>50</default>
+          <constraints>
+            <minimum>1</minimum>
+            <step>1</step>
+            <maximum>200</maximum>
+          </constraints>
+          <control type="slider" format="integer"/>
+        </setting>
+        <setting id="rows" type="integer" label="30001" help="0">
+          <default>30</default>
+          <constraints>
+            <minimum>1</minimum>
+            <step>1</step>
+            <maximum>200</maximum>
+          </constraints>
+          <control type="slider" format="integer"/>
+        </setting>
+      </group>
+    </category>
+  </section>
 </settings>
