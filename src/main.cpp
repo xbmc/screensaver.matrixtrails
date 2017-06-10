@@ -85,6 +85,7 @@ bool CScreensaverMatrixTrails::Start()
     return false;
   m_timer = new CTimer();
   m_timer->Init();
+  m_timer->SetSpeed(static_cast<f32>(kodi::GetSettingInt("speed")));
   std::string path = kodi::GetAddonPath() + "/resources/MatrixTrails.tga";
   if (!m_matrixTrails->RestoreDevice(&m_render, path.c_str()))
   {
@@ -137,7 +138,7 @@ void CConfig::SetDefaults()
   m_NumRows = 40;
   m_CharCol.Set(0.0f, 1.0f, 0.0f, 1.0f);
 
-  m_NumChars = 32;
+  m_NumChars = 48;
   m_CharSizeTex.x = 32.0/TEXTURESIZE;
   m_CharSizeTex.y = 26.0f/TEXTURESIZE;
 }
