@@ -6,7 +6,11 @@
 #ifndef __TEXTURE_H__
 #define __TEXTURE_H__
 
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#else
 #include <GL/gl.h>
+#endif
 
 typedef struct
 {

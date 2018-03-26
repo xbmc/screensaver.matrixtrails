@@ -32,7 +32,11 @@
 #include "timer.h"
 
 #include <kodi/addon-instance/Screensaver.h>
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#else
 #include <GL/gl.h>
+#endif
 #include <time.h>
 #include <iostream>
 #include <string.h>
