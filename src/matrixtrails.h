@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include "shaders/GUIShader.h"
 #include "column.h"
 #include "Texture.h"
 
@@ -19,22 +20,21 @@
 typedef struct TRenderVertex
 {
   CVector pos;
-  f32 w;
   float col[4];
   f32 u, v;
 } TRenderVertex;
 
 ////////////////////////////////////////////////////////////////////////////
 //
-class CMatrixTrails
+class ATTRIBUTE_HIDDEN CMatrixTrails
 {
 public:
   CMatrixTrails(CConfig* config);
   ~CMatrixTrails();
-  bool RestoreDevice(CRenderD3D* render, const char* path);
-  void InvalidateDevice(CRenderD3D* render);
+  bool RestoreDevice(const std::string& path);
+  void InvalidateDevice();
   void Update(f32 dt);
-  bool Draw(CRenderD3D* render);
+  bool Draw();
 
 protected:
   int m_NumColumns;
@@ -45,6 +45,10 @@ protected:
   GLuint m_Texture;
 
 private:
+  CGUIShader* m_shader = nullptr;
+  unsigned int m_vertexVBO = -1;
+  unsigned int m_vertexVAO = -1;
+  unsigned int m_indexVBO = -1;
   CConfig* m_config;
 };
 
