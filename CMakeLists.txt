@@ -38,7 +38,6 @@ set(MATRIXTRAILS_SOURCES src/column.cpp
 set(MATRIXTRAILS_HEADERS src/column.h
                          src/main.h
                          src/matrixtrails.h
-                         src/Texture.h
                          src/timer.h
                          src/types.h
                          src/shaders/GUIShader.h

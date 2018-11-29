@@ -9,7 +9,6 @@
 
 #include "shaders/GUIShader.h"
 #include "column.h"
-#include "Texture.h"
 
 /***************************** D E F I N E S *******************************/
 /****************************** M A C R O S ********************************/
