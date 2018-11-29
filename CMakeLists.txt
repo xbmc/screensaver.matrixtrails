@@ -7,12 +7,12 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR})
 enable_language(CXX)
 
 find_package(Kodi REQUIRED)
-find_package(SOIL REQUIRED)
 
 include(ExternalProject)
 
-include_directories(${KODI_INCLUDE_DIR}/.. # Hack way with "/..", need bigger Kodi cmake rework to match right include ways
-                    ${SOIL_INCLUDE_DIRS})
+add_subdirectory(lib/SOIL2)
+
+include_directories(${KODI_INCLUDE_DIR}/..) # Hack way with "/..", need bigger Kodi cmake rework to match right include ways
 
 set(MATRIXTRAILS_SOURCES src/column.cpp
                          src/main.cpp
@@ -25,7 +25,7 @@ set(MATRIXTRAILS_HEADERS src/column.h
                          src/timer.h
                          src/types.h)
 
-set(DEPLIBS ${SOIL_LIBRARIES})
+set(DEPLIBS soil2)
 
 build_addon(screensaver.matrixtrails MATRIXTRAILS DEPLIBS)
 

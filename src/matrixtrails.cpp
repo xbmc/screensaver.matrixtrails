@@ -23,8 +23,9 @@
 
 #include "main.h"
 #include "matrixtrails.h"
+#include "SOIL2/SOIL2.h"
+
 #include <vector>
-#include <SOIL/SOIL.h>
 #include <iostream>
 
 ////////////////////////////////////////////////////////////////////////////
