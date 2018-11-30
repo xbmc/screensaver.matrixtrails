@@ -2,7 +2,7 @@
 
 This is a [Kodi](http://kodi.tv) screensaver addon.
 
-[![Build Status](https://travis-ci.org/notspiff/screensaver.matrixtrails.svg?branch=master)](https://travis-ci.org/notspiff/screensaver.matrixtrails)
+[![Build Status](https://travis-ci.org/xbmc/screensaver.matrixtrails.svg?branch=master)](https://travis-ci.org/xbmc/screensaver.matrixtrails)
 
 ## Build instructions
 
@@ -16,7 +16,7 @@ The following instructions assume you will have built Kodi already in the `kodi-
 suggested by the README.
 
 1. `git clone https://github.com/xbmc/xbmc.git`
-2. `git clone https://github.com/notspiff/screensaver.matrixtrails.git`
+2. `git clone https://github.com/xbmc/screensaver.matrixtrails.git`
 3. `cd screensaver.matrixtrails && mkdir build && cd build`
 4. `cmake -DADDONS_TO_BUILD=screensaver.matrixtrails -DADDON_SRC_PREFIX=../.. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../../xbmc/kodi-build/addons -DPACKAGE_ZIP=1 ../../xbmc/cmake/addons`
 5. `make`
