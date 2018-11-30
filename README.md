@@ -3,7 +3,6 @@
 This is a [Kodi](http://kodi.tv) screensaver addon.
 
 [![Build Status](https://travis-ci.org/notspiff/screensaver.matrixtrails.svg?branch=master)](https://travis-ci.org/notspiff/screensaver.matrixtrails)
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/notspiff/screensaver.matrixtrails?svg=true)](https://ci.appveyor.com/project/notspiff/screensaver-matrixtrails)
 
 ## Build instructions
 

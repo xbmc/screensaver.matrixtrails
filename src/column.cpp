@@ -11,22 +11,23 @@
 #include "column.h"
 
 ////////////////////////////////////////////////////////////////////////////
-// 
+//
 CColumn::CColumn()
-  : m_NumChars(0),
-    m_Chars(nullptr)
+  : m_Chars(nullptr),
+    m_NumChars(0)
+
 {
 }
 
 ////////////////////////////////////////////////////////////////////////////
-// 
+//
 CColumn::~CColumn()
 {
   SAFE_DELETE_ARRAY(m_Chars);
 }
 
 ////////////////////////////////////////////////////////////////////////////
-// 
+//
 void CColumn::Init(CConfig* config, int numChars)
 {
   m_config = config;
@@ -44,7 +45,7 @@ void CColumn::Init(CConfig* config, int numChars)
 }
 
 ////////////////////////////////////////////////////////////////////////////
-// 
+//
 void CColumn::Update(f32 dt)
 {
   for (int cNr=0; cNr<m_NumChars; cNr++)
@@ -70,15 +71,15 @@ void CColumn::Update(f32 dt)
   }
 }
 
-#include <iostream>
-
 ////////////////////////////////////////////////////////////////////////////
-// 
+//
 TRenderVertex* CColumn::UpdateVertexBuffer(TRenderVertex* vert, f32 posX, f32 posY, const CVector& charSize, const CVector2& charSizeTex)
 {
   int numCharsPerRow = (int)(1.0f/charSizeTex.x);
-  for (int cNr=0; cNr<m_NumChars; cNr++)
+  for (int cNr=0; cNr < m_NumChars; cNr++)
   {
+    posY -= charSize.y;
+
     float col[4];
     int charNr = m_Chars[cNr].m_CharNr;
     if (m_Chars[cNr].m_CharNr == 0)
@@ -103,7 +104,6 @@ TRenderVertex* CColumn::UpdateVertexBuffer(TRenderVertex* vert, f32 posX, f32 po
     f32 v = charSizeTex.y*(f32)(charNr / numCharsPerRow);
 
     vert->pos = CVector(posX, posY+charSize.y, 0.0f);
-    vert->w = 0.0f;
     vert->col[0] = col[0];
     vert->col[1] = col[1];
     vert->col[2] = col[2];
@@ -112,7 +112,6 @@ TRenderVertex* CColumn::UpdateVertexBuffer(TRenderVertex* vert, f32 posX, f32 po
     vert++;
 
     vert->pos = CVector(posX, posY, 0.0f);
-    vert->w = 0.0f;
     vert->col[0] = col[0];
     vert->col[1] = col[1];
     vert->col[2] = col[2];
@@ -121,7 +120,6 @@ TRenderVertex* CColumn::UpdateVertexBuffer(TRenderVertex* vert, f32 posX, f32 po
     vert++;
 
     vert->pos = CVector(posX+charSize.x, posY+charSize.y, 0.0f);
-    vert->w = 0.0f;
     vert->col[0] = col[0];
     vert->col[1] = col[1];
     vert->col[2] = col[2];
@@ -130,14 +128,12 @@ TRenderVertex* CColumn::UpdateVertexBuffer(TRenderVertex* vert, f32 posX, f32 po
     vert++;
 
     vert->pos = CVector(posX+charSize.x, posY, 0.0f);
-    vert->w = 0.0f;
     vert->col[0] = col[0];
     vert->col[1] = col[1];
     vert->col[2] = col[2];
     vert->col[3] = col[3];
     vert->u = u+charSizeTex.x; vert->v = v;
     vert++;
-    posY += charSize.y;
   }
   return vert;
 }

@@ -23,9 +23,11 @@
 
 #include "main.h"
 #include "matrixtrails.h"
+#include "SOIL2/SOIL2.h"
+
 #include <vector>
-#include <SOIL/SOIL.h>
-#include <iostream>
+
+#define BUFFER_OFFSET(i) ((char *)nullptr + (i))
 
 ////////////////////////////////////////////////////////////////////////////
 //
@@ -51,25 +53,39 @@ CMatrixTrails::~CMatrixTrails()
 
 ////////////////////////////////////////////////////////////////////////////
 //
-bool CMatrixTrails::RestoreDevice(CRenderD3D* render, const char* path)
+bool CMatrixTrails::RestoreDevice(const std::string& path)
 {
-  int numQuads = m_NumRows*m_NumColumns;
-
-  int channels;
-
-  m_CharSize.x = (f32)render->m_Width  / (f32)m_NumColumns;
-  m_CharSize.y = (f32)render->m_Height / (f32)m_NumRows;
+  m_CharSize.x = 2.0 / (f32)m_NumColumns;
+  m_CharSize.y = 2.0 / (f32)m_NumRows;
   m_CharSize.z = 0.0f;
 
-  m_Texture = SOIL_load_OGL_texture(path, SOIL_LOAD_RGB, 0, 0);
+  m_shader = new CGUIShader("vert.glsl", "frag.glsl");
+  if (!m_shader->CompileAndLink())
+  {
+    delete m_shader;
+    m_shader = nullptr;
+    return false;
+  }
+
+  glGenBuffers(1, &m_vertexVBO);
+  glGenBuffers(1, &m_indexVBO);
+
+  m_Texture = SOIL_load_OGL_texture(path.c_str(), SOIL_LOAD_RGB, 0, 0);
 
   return true;
 }
 
 ////////////////////////////////////////////////////////////////////////////
 //
-void CMatrixTrails::InvalidateDevice(CRenderD3D* render)
+void CMatrixTrails::InvalidateDevice()
 {
+  glDeleteBuffers(1, &m_vertexVBO);
+  m_vertexVBO = 0;
+  glDeleteBuffers(1, &m_indexVBO);
+  m_indexVBO = 0;
+
+  delete(m_shader);
+  m_shader = nullptr;
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -84,12 +100,13 @@ void CMatrixTrails::Update(f32 dt)
 
 ////////////////////////////////////////////////////////////////////////////
 //
-bool CMatrixTrails::Draw(CRenderD3D* render)
+bool CMatrixTrails::Draw()
 {
   // Fill in the vertex buffers with the quads
-  std::vector<TRenderVertex> vert(m_NumRows*m_NumColumns*4);
+  size_t nVSize = m_NumRows * m_NumColumns * 4;
+  std::vector<TRenderVertex> vert(nVSize);
 
-  f32 posX = 0, posY = 0;
+  f32 posX = -1.0, posY = 1.0;
   TRenderVertex* vert2=&vert[0];
   for (int cNr=0; cNr<m_NumColumns; cNr++)
   {
@@ -97,24 +114,39 @@ bool CMatrixTrails::Draw(CRenderD3D* render)
     posX += m_CharSize.x;
   }
 
-  glEnable(GL_BLEND);
-  glShadeModel(GL_SMOOTH);
-  glEnable(GL_TEXTURE_2D);
+  GLint posLoc = m_shader->GetPosLoc();
+  GLint colLoc = m_shader->GetColLoc();
+  GLint texCoord = m_shader->GetTexCoord();
+
+  m_shader->PushMatrix();
+  m_shader->Enable();
+
+  glBindBuffer(GL_ARRAY_BUFFER, m_vertexVBO);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(TRenderVertex)*nVSize, &vert[0], GL_STATIC_DRAW);
+
+  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
   glBindTexture(GL_TEXTURE_2D, m_Texture);
 
-  int index = 0;
-  glBegin(GL_TRIANGLE_STRIP);
-  for (int rNr=0; rNr<m_NumRows; rNr++)
-  {
-    for (int cNr=0; cNr<m_NumColumns*4; cNr++, index++)
-    {
-      glColor4f(vert[index].col[0], vert[index].col[1],
-                vert[index].col[2], vert[index].col[3]);
-      glTexCoord2f(vert[index].u, vert[index].v);
-      glVertex2f(vert[index].pos.x, vert[index].pos.y);
-    }
-  }
-  glEnd();
+  glVertexAttribPointer(posLoc, 3, GL_FLOAT, GL_FALSE, sizeof(TRenderVertex), BUFFER_OFFSET(offsetof(TRenderVertex, pos)));
+  glEnableVertexAttribArray(posLoc);
+
+  glVertexAttribPointer(colLoc, 4, GL_FLOAT, GL_FALSE, sizeof(TRenderVertex), BUFFER_OFFSET(offsetof(TRenderVertex, col)));
+  glEnableVertexAttribArray(colLoc);
+
+  glVertexAttribPointer(texCoord, 2, GL_FLOAT, GL_FALSE, sizeof(TRenderVertex), BUFFER_OFFSET(offsetof(TRenderVertex, u)));
+  glEnableVertexAttribArray(texCoord);
+
+  glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+  glEnable(GL_BLEND);
+  glDrawArrays(GL_TRIANGLE_STRIP, 0, nVSize);
+
+  glDisableVertexAttribArray(posLoc);
+  glDisableVertexAttribArray(colLoc);
+  glDisableVertexAttribArray(texCoord);
+
+  m_shader->Disable();
+  m_shader->PopMatrix();
 
   return true;
 }

@@ -32,18 +32,13 @@
 #include "timer.h"
 
 #include <kodi/addon-instance/Screensaver.h>
-#ifdef __APPLE__
-#include <OpenGL/gl.h>
-#else
-#include <GL/gl.h>
-#endif
+
 #include <time.h>
-#include <iostream>
 #include <string.h>
 
 #define TEXTURESIZE 256  // Width & height of the texture we are using
 
-class CScreensaverMatrixTrails
+class ATTRIBUTE_HIDDEN CScreensaverMatrixTrails
   : public kodi::addon::CAddonBase,
     public kodi::addon::CInstanceScreensaver
 {
@@ -57,7 +52,6 @@ public:
 private:
   CMatrixTrails* m_matrixTrails;
   CTimer* m_timer;
-  CRenderD3D m_render;
   CConfig m_config;
 };
 
@@ -69,9 +63,6 @@ CScreensaverMatrixTrails::CScreensaverMatrixTrails()
   : m_matrixTrails(nullptr),
     m_timer(nullptr)
 {
-  m_render.m_Width = Width();
-  m_render.m_Height = Height();
-
   m_config.SetDefaults();
   m_config.m_NumColumns = kodi::GetSettingInt("columns");
   m_config.m_NumRows = kodi::GetSettingInt("rows");
@@ -91,7 +82,7 @@ bool CScreensaverMatrixTrails::Start()
   m_timer->Init();
   m_timer->SetSpeed(static_cast<f32>(kodi::GetSettingInt("speed")));
   std::string path = kodi::GetAddonPath() + "/resources/MatrixTrails.tga";
-  if (!m_matrixTrails->RestoreDevice(&m_render, path.c_str()))
+  if (!m_matrixTrails->RestoreDevice(path))
   {
     Stop();
     return false;
@@ -107,7 +98,7 @@ void CScreensaverMatrixTrails::Stop()
 {
   if (!m_matrixTrails)
     return;
-  m_matrixTrails->InvalidateDevice(&m_render);
+  m_matrixTrails->InvalidateDevice();
   SAFE_DELETE(m_matrixTrails);
   SAFE_DELETE(m_timer);
 }
@@ -123,7 +114,7 @@ void CScreensaverMatrixTrails::Render()
     return;
   m_timer->Update();
   m_matrixTrails->Update(m_timer->GetDeltaTime());
-  m_matrixTrails->Draw(&m_render);
+  m_matrixTrails->Draw();
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -134,16 +125,16 @@ void CScreensaverMatrixTrails::Render()
 //
 void CConfig::SetDefaults()
 {
-  m_CharDelayMin = 0.015f;
-  m_CharDelayMax = 0.060f;
-  m_FadeSpeedMin = 1.0f;
-  m_FadeSpeedMax = 1.5f;
+  m_CharDelayMin = 0.030f;
+  m_CharDelayMax = 0.120f;
+  m_FadeSpeedMin = 0.25f;
+  m_FadeSpeedMax = 0.70f;
   m_NumColumns = 200;
   m_NumRows = 40;
   m_CharCol.Set(0.0f, 1.0f, 0.0f, 1.0f);
 
-  m_NumChars = 48;
-  m_CharSizeTex.x = 32.0/TEXTURESIZE;
+  m_NumChars = 32;
+  m_CharSizeTex.x = 32.0f/TEXTURESIZE;
   m_CharSizeTex.y = 26.0f/TEXTURESIZE;
 }
 

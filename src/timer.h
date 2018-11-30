@@ -52,14 +52,14 @@ inline CTimer::CTimer()
 
 ////////////////////////////////////////////////////////////////////////////
 //
-inline void  CTimer::Init(void)
+inline void CTimer::Init(void)
 {
   m_OldCount = WallTime();
 }
 
 ////////////////////////////////////////////////////////////////////////////
 //
-inline void  CTimer::Update(void)
+inline void CTimer::Update(void)
 {
   m_DeltaTime = (WallTime()-m_OldCount)*m_speed;
   m_OldCount = WallTime();
@@ -67,7 +67,7 @@ inline void  CTimer::Update(void)
 
 ////////////////////////////////////////////////////////////////////////////
 //
-inline f32    CTimer::GetDeltaTime(void)
+inline f32 CTimer::GetDeltaTime(void)
 {
   return m_DeltaTime;
 }
