@@ -9,8 +9,8 @@
     point="xbmc.ui.screensaver"
     library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
-    <summary>Matrix trails screensaver</summary>
-    <description>The "digital rain" effect, as seen on the computer monitors in "The Matrix".</description>
+    <summary lang="en_GB">Matrix trails screensaver</summary>
+    <description lang="en_GB">The "digital rain" effect, as seen on the computer monitors in "The Matrix".</description>
     <platform>@PLATFORM@</platform>
     <assets>
       <icon>resources/icon.png</icon>
