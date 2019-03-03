@@ -1,38 +1,27 @@
-.build
-.cproject
-.deps
-.libs
-.project
-
+# build artifacts
+build/
+obj-x86_64-linux-gnu/
 screensaver.*/addon.xml
 
-.dummy
-.dummy.in
+# commonly used editors
+# vim
+*.swp
 
-*.o
-*.a
-*.P
-*.lo
-*.la
-*.pvr
-*.zip
-*.patch
-*.orig
-*.diff
+# Eclipse
+*.project
+*.cproject
+.classpath
+*.sublime-*
+.settings/
 
-*.idb
-*.tlog
-*.lastbuildstate
+# KDevelop 4
+*.kdev4
 
-# Windows specific generated files
-*.exp
-*.lib
-*.pdb
-*.ilk
-*.suo
-*.sdf
-*.opensdf
-*.vcxproj.user
+# gedit
+*~
 
-build/
-VS2013Kodi_AddonProject/
+# CLion
+/.idea
+
+# clion
+.idea/
