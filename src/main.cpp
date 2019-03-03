@@ -32,6 +32,7 @@
 #include "timer.h"
 
 #include <kodi/addon-instance/Screensaver.h>
+#include <kodi/gui/gl/GL.h>
 
 #include <time.h>
 #include <string.h>

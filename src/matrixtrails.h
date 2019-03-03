@@ -7,7 +7,8 @@
 
 #pragma once
 
-#include "shaders/GUIShader.h"
+#include <kodi/gui/gl/Shader.h>
+
 #include "column.h"
 
 /***************************** D E F I N E S *******************************/
@@ -25,16 +26,21 @@ typedef struct TRenderVertex
 
 ////////////////////////////////////////////////////////////////////////////
 //
-class ATTRIBUTE_HIDDEN CMatrixTrails
+class ATTRIBUTE_HIDDEN CMatrixTrails : public kodi::gui::gl::CShaderProgram
 {
 public:
   CMatrixTrails(CConfig* config);
   ~CMatrixTrails();
+
   bool RestoreDevice(const std::string& path);
   void InvalidateDevice();
   void Update(f32 dt);
   bool Draw();
 
+  // override functions for kodi::gui::gl::CShaderProgram
+  void OnCompiledAndLinked() override;
+  bool OnEnabled() override { return true; }
+  
 protected:
   int m_NumColumns;
   int m_NumRows;
@@ -44,10 +50,12 @@ protected:
   GLuint m_Texture;
 
 private:
-  CGUIShader* m_shader = nullptr;
-  unsigned int m_vertexVBO = -1;
-  unsigned int m_vertexVAO = -1;
-  unsigned int m_indexVBO = -1;
+  GLuint m_vertexVBO = -1;
+ 
+  GLint m_aPosition = -1;
+  GLint m_aColor = -1;
+  GLint m_aCoord = -1;
+
   CConfig* m_config;
 };
 

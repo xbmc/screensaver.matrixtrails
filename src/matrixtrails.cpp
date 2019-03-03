@@ -27,8 +27,6 @@
 
 #include <vector>
 
-#define BUFFER_OFFSET(i) ((char *)nullptr + (i))
-
 ////////////////////////////////////////////////////////////////////////////
 //
 CMatrixTrails::CMatrixTrails(CConfig* config)
@@ -59,16 +57,12 @@ bool CMatrixTrails::RestoreDevice(const std::string& path)
   m_CharSize.y = 2.0 / (f32)m_NumRows;
   m_CharSize.z = 0.0f;
 
-  m_shader = new CGUIShader("vert.glsl", "frag.glsl");
-  if (!m_shader->CompileAndLink())
-  {
-    delete m_shader;
-    m_shader = nullptr;
+  std::string fraqShader = kodi::GetAddonPath("resources/shaders/" GL_TYPE_STRING "/frag.glsl");
+  std::string vertShader = kodi::GetAddonPath("resources/shaders/" GL_TYPE_STRING "/vert.glsl");
+  if (!LoadShaderFiles(vertShader, fraqShader) || !CompileAndLink())
     return false;
-  }
 
   glGenBuffers(1, &m_vertexVBO);
-  glGenBuffers(1, &m_indexVBO);
 
   m_Texture = SOIL_load_OGL_texture(path.c_str(), SOIL_LOAD_RGB, 0, 0);
 
@@ -81,11 +75,6 @@ void CMatrixTrails::InvalidateDevice()
 {
   glDeleteBuffers(1, &m_vertexVBO);
   m_vertexVBO = 0;
-  glDeleteBuffers(1, &m_indexVBO);
-  m_indexVBO = 0;
-
-  delete(m_shader);
-  m_shader = nullptr;
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -114,39 +103,40 @@ bool CMatrixTrails::Draw()
     posX += m_CharSize.x;
   }
 
-  GLint posLoc = m_shader->GetPosLoc();
-  GLint colLoc = m_shader->GetColLoc();
-  GLint texCoord = m_shader->GetTexCoord();
-
-  m_shader->PushMatrix();
-  m_shader->Enable();
+  EnableShader();
 
   glBindBuffer(GL_ARRAY_BUFFER, m_vertexVBO);
   glBufferData(GL_ARRAY_BUFFER, sizeof(TRenderVertex)*nVSize, &vert[0], GL_STATIC_DRAW);
 
-  glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
   glBindTexture(GL_TEXTURE_2D, m_Texture);
 
-  glVertexAttribPointer(posLoc, 3, GL_FLOAT, GL_FALSE, sizeof(TRenderVertex), BUFFER_OFFSET(offsetof(TRenderVertex, pos)));
-  glEnableVertexAttribArray(posLoc);
+  glVertexAttribPointer(m_aPosition, 3, GL_FLOAT, GL_FALSE, sizeof(TRenderVertex), BUFFER_OFFSET(offsetof(TRenderVertex, pos)));
+  glEnableVertexAttribArray(m_aPosition);
 
-  glVertexAttribPointer(colLoc, 4, GL_FLOAT, GL_FALSE, sizeof(TRenderVertex), BUFFER_OFFSET(offsetof(TRenderVertex, col)));
-  glEnableVertexAttribArray(colLoc);
+  glVertexAttribPointer(m_aColor, 4, GL_FLOAT, GL_FALSE, sizeof(TRenderVertex), BUFFER_OFFSET(offsetof(TRenderVertex, col)));
+  glEnableVertexAttribArray(m_aColor);
 
-  glVertexAttribPointer(texCoord, 2, GL_FLOAT, GL_FALSE, sizeof(TRenderVertex), BUFFER_OFFSET(offsetof(TRenderVertex, u)));
-  glEnableVertexAttribArray(texCoord);
+  glVertexAttribPointer(m_aCoord, 2, GL_FLOAT, GL_FALSE, sizeof(TRenderVertex), BUFFER_OFFSET(offsetof(TRenderVertex, u)));
+  glEnableVertexAttribArray(m_aCoord);
 
   glBindBuffer(GL_ARRAY_BUFFER, 0);
 
   glEnable(GL_BLEND);
   glDrawArrays(GL_TRIANGLE_STRIP, 0, nVSize);
 
-  glDisableVertexAttribArray(posLoc);
-  glDisableVertexAttribArray(colLoc);
-  glDisableVertexAttribArray(texCoord);
+  glDisableVertexAttribArray(m_aPosition);
+  glDisableVertexAttribArray(m_aColor);
+  glDisableVertexAttribArray(m_aCoord);
 
-  m_shader->Disable();
-  m_shader->PopMatrix();
+  DisableShader();
 
   return true;
+}
+
+void CMatrixTrails::OnCompiledAndLinked()
+{
+  // Variables passed directly to the Vertex shader
+  m_aPosition = glGetAttribLocation(ProgramHandle(), "a_pos");
+  m_aColor = glGetAttribLocation(ProgramHandle(), "a_color");
+  m_aCoord = glGetAttribLocation(ProgramHandle(), "a_coord");
 }
