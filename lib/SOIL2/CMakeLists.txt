@@ -32,8 +32,9 @@ set(HEADER_FILES
 
 add_library(soil2 STATIC ${SRC_FILES} ${HEADER_FILES})
 target_include_directories(soil2 PUBLIC ${CMAKE_CURRENT_LIST_DIR}/..)
-if(CORE_SYSTEM_NAME STREQUAL osx)
+if(CORE_SYSTEM_NAME STREQUAL darwin_embedded OR CORE_SYSTEM_NAME STREQUAL osx OR CORE_SYSTEM_NAME STREQUAL ios)
   target_link_libraries(soil2 PUBLIC "-framework CoreFoundation")
 elseif(OPENGLES_FOUND)
   target_compile_definitions(soil2 PRIVATE SOIL_GLES2)
+  target_link_libraries(soil2 PRIVATE ${OPENGLES_LIBRARIES})
 endif()

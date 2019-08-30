@@ -2789,12 +2789,22 @@ int query_cubemap_capability( void )
 	if( has_cubemap_capability == SOIL_CAPABILITY_UNKNOWN )
 	{
 		/*	we haven't yet checked for the capability, do so	*/
+#if defined( SOIL_PLATFORM_IOS )
+		/*	iOS give for cubemap nothing and seems to be not supported, but by test it was usable! */
+		has_cubemap_capability = SOIL_CAPABILITY_PRESENT;
+#else
 		if(
 			(0 == SOIL_GL_ExtensionSupported(
 				"GL_ARB_texture_cube_map" ) )
 		&&
 			(0 == SOIL_GL_ExtensionSupported(
+				"GL_ARB_texture_cube_map_array" ) )
+		&&
+			(0 == SOIL_GL_ExtensionSupported(
 				"GL_EXT_texture_cube_map" ) )
+		&&
+			(0 == SOIL_GL_ExtensionSupported(
+				"GL_EXT_texture_cube_map_array" ) )
 			)
 		{
 			/*	not there, flag the failure	*/
@@ -2804,6 +2814,7 @@ int query_cubemap_capability( void )
 			/*	it's there!	*/
 			has_cubemap_capability = SOIL_CAPABILITY_PRESENT;
 		}
+#endif
 	}
 	/*	let the user know if we can do cubemaps or not	*/
 	return has_cubemap_capability;
