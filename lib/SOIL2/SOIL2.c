@@ -33,7 +33,7 @@
 	#define SOIL_X11_PLATFORM
 #endif
 
-#if ( defined( SOIL_PLATFORM_IOS ) || defined( SOIL_PLATFORM_ANDROID ) ) && ( !defined( SOIL_GLES1 ) && !defined( SOIL_GLES2 ) )
+#if ( defined(HAS_ANGLE) || defined( SOIL_PLATFORM_IOS ) || defined( SOIL_PLATFORM_ANDROID ) ) && ( !defined( SOIL_GLES1 ) && !defined( SOIL_GLES2 ) )
 	#define SOIL_GLES2
 #endif
 
@@ -41,7 +41,12 @@
 	#include <EGL/egl.h>
 #endif
 
-#if defined( SOIL_GLES2 )
+#if defined(HAS_ANGLE)
+  #include <angle_gl.h>
+  #ifndef APIENTRY
+    #define APIENTRY GL_APIENTRY
+  #endif
+#elif defined( SOIL_GLES2 )
 	#ifdef SOIL_PLATFORM_IOS
 		#include <OpenGLES/ES2/gl.h>
 		#include <OpenGLES/ES2/glext.h>

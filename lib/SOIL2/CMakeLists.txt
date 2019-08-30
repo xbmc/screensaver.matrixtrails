@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 project(SOIL2)
 
@@ -32,6 +32,7 @@ set(HEADER_FILES
 
 add_library(soil2 STATIC ${SRC_FILES} ${HEADER_FILES})
 target_include_directories(soil2 PUBLIC ${CMAKE_CURRENT_LIST_DIR}/..)
+target_link_libraries(soil2 PUBLIC ${DEPLIBS})
 if(CORE_SYSTEM_NAME STREQUAL osx)
   target_link_libraries(soil2 PUBLIC "-framework CoreFoundation")
 elseif(OPENGLES_FOUND)

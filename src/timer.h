@@ -8,7 +8,7 @@
 #pragma once
 
 #include "types.h"
-#include <sys/time.h>
+#include <chrono>
 
 /***************************** D E F I N E S *******************************/
 /****************************** M A C R O S ********************************/
@@ -30,13 +30,6 @@ protected:
   double m_OldCount;
   f32 m_DeltaTime;
   f32 m_speed;
-
-  static double WallTime ()
-  {
-    timeval tmpTime;
-    gettimeofday(&tmpTime,nullptr);
-    return tmpTime.tv_sec + tmpTime.tv_usec/1.0e6;
-  }
 };
 
 /***************************** G L O B A L S *******************************/
@@ -54,15 +47,16 @@ inline CTimer::CTimer()
 //
 inline void CTimer::Init(void)
 {
-  m_OldCount = WallTime();
+  m_OldCount = std::chrono::duration<double>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
 }
 
 ////////////////////////////////////////////////////////////////////////////
 //
 inline void CTimer::Update(void)
 {
-  m_DeltaTime = (WallTime()-m_OldCount)*m_speed;
-  m_OldCount = WallTime();
+  double time = std::chrono::duration<double>(std::chrono::high_resolution_clock::now().time_since_epoch()).count();
+  m_DeltaTime = (time - m_OldCount) * m_speed;
+  m_OldCount = time;
 }
 
 ////////////////////////////////////////////////////////////////////////////
