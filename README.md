@@ -1,8 +1,9 @@
 # screensaver.matrixtrails addon for Kodi
 
-This is a [Kodi](http://kodi.tv) screensaver addon.
+This is a [Kodi](https://kodi.tv) screensaver addon.
 
-[![Build Status](https://travis-ci.org/xbmc/screensaver.matrixtrails.svg?branch=master)](https://travis-ci.org/xbmc/screensaver.matrixtrails)
+[![Build Status](https://travis-ci.org/xbmc/screensaver.matrixtrails.svg?branch=Matrix)](https://travis-ci.org/xbmc/screensaver.matrixtrails/branches)
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/xbmc/screensaver.matrixtrails?branch=Matrix&svg=true)](https://ci.appveyor.com/project/xbmc/screensaver-matrixtrails?branch=Matrix)
 
 ## Build instructions
 

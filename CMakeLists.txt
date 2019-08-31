@@ -5,22 +5,21 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR})
 
 find_package(Kodi REQUIRED)
 
-if(APP_RENDER_SYSTEM STREQUAL "gl" OR NOT APP_RENDER_SYSTEM)
+if(NOT WIN32 AND (APP_RENDER_SYSTEM STREQUAL "gl" OR NOT APP_RENDER_SYSTEM))
   find_package(OpenGl REQUIRED)
   set(DEPLIBS ${OPENGL_LIBRARIES})
   set(includes ${OPENGL_INCLUDE_DIR})
   add_definitions(${OPENGL_DEFINITIONS})
-elseif(APP_RENDER_SYSTEM STREQUAL "gles")
+else()
   find_package(OpenGLES REQUIRED)
   set(DEPLIBS ${OPENGLES_LIBRARIES})
   set(includes ${OPENGLES_INCLUDE_DIR})
   add_definitions(${OPENGLES_DEFINITIONS})
 endif()
 
-add_subdirectory(lib/SOIL2)
+include_directories(${KODI_INCLUDE_DIR}/..) # Hack way with "/..", need bigger Kodi cmake rework to match right include ways
 
-include_directories(${KODI_INCLUDE_DIR}/.. # Hack way with "/..", need bigger Kodi cmake rework to match right include ways
-                    ${PROJECT_SOURCE_DIR}/lib)
+add_subdirectory(lib/SOIL2)
 
 set(MATRIXTRAILS_SOURCES src/column.cpp
                          src/main.cpp
