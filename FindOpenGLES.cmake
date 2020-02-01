@@ -1,9 +1,9 @@
 #.rst:
 # FindOpenGLES
 # ------------
-# Finds the OpenGLES2 library
+# Finds the OpenGLES2 and OpenGLES3 library
 #
-# This will define the following variables::
+# This will define the following variables:
 #
 # OPENGLES_FOUND - system has OpenGLES
 # OPENGLES_INCLUDE_DIRS - the OpenGLES include directory
@@ -18,7 +18,7 @@ if(PKG_CONFIG_FOUND)
   pkg_check_modules(PC_OPENGLES ${_brcmprefix}glesv2 QUIET)
 endif()
 
-if(NOT CORE_SYSTEM_NAME STREQUAL ios)
+if(NOT CORE_SYSTEM_NAME STREQUAL darwin_embedded AND NOT CORE_SYSTEM_NAME STREQUAL ios)
   find_path(OPENGLES_INCLUDE_DIR GLES2/gl2.h
                                  PATHS ${PC_OPENGLES_INCLUDEDIR})
   find_library(OPENGLES_gl_LIBRARY NAMES ${_brcmprefix}GLESv2
