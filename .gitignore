@@ -1,7 +1,16 @@
 # build artifacts
 build/
-obj-x86_64-linux-gnu/
 screensaver.*/addon.xml
+
+# Debian build files
+debian/changelog
+debian/files
+debian/*.log
+debian/*.substvars
+debian/.debhelper/
+debian/tmp/
+debian/kodi-screensaver-*/
+obj-x86_64-linux-gnu/
 
 # commonly used editors
 # vim
@@ -25,3 +34,9 @@ screensaver.*/addon.xml
 
 # clion
 .idea/
+
+# to prevent add after a "git format-patch VALUE" and "git add ." call
+/*.patch
+
+# to prevent add if project code opened by Visual Studio over CMake file
+.vs/
