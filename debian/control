@@ -1,9 +1,9 @@
 Source: kodi-screensaver-matrixtrails
 Priority: extra
-Maintainer: Arne Morten Kvarving <cptspiff@gmail.com>
+Maintainer: Nobody <nobody@kodi.tv>
 Build-Depends: debhelper (>= 9.0.0), cmake, kodi-addon-dev,
-               libgl1-mesa-dev
-Standards-Version: 3.9.5
+               libgles2-mesa-dev [arm64 armhf], libgl1-mesa-dev [i386 amd64]
+Standards-Version: 4.1.2
 Section: libs
 Homepage: http://kodi.tv
 
