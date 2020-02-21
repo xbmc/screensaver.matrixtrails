@@ -88,9 +88,9 @@ TRenderVertex* CColumn::UpdateVertexBuffer(TRenderVertex* vert, f32 posX, f32 po
     }
     else if (cNr == m_CurChar)
     {
-      col[0] = 0.8;
-      col[1] = 1.0;
-      col[2] = 0.9;
+      col[0] = m_config->m_CharEventCol.r;
+      col[1] = m_config->m_CharEventCol.g;
+      col[2] = m_config->m_CharEventCol.b;
       col[3] = 1.0;
     }
     else {
