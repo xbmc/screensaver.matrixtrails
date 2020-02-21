@@ -3,7 +3,7 @@
   <section id="addon" label="0" help="0">
     <category id="main" label="128" help="0">
       <group id="1" label="0">
-        <setting id="columns" type="integer" label="30000" help="0">
+        <setting id="columns" type="integer" label="30000" help="30004">
           <default>100</default>
           <constraints>
             <minimum>1</minimum>
@@ -12,7 +12,7 @@
           </constraints>
           <control type="slider" format="integer"/>
         </setting>
-        <setting id="rows" type="integer" label="30001" help="0">
+        <setting id="rows" type="integer" label="30001" help="30005">
           <default>60</default>
           <constraints>
             <minimum>1</minimum>
@@ -21,7 +21,7 @@
           </constraints>
           <control type="slider" format="integer"/>
         </setting>
-        <setting id="speed" type="integer" label="30002" help="0">
+        <setting id="speed" type="integer" label="30002" help="30006">
           <default>2</default>
           <constraints>
             <minimum>1</minimum>
