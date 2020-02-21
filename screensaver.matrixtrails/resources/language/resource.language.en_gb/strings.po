@@ -27,3 +27,93 @@ msgstr ""
 msgctxt "#30003"
 msgid "{0:d}x"
 msgstr ""
+
+#. Category name
+#: settings.xml
+msgctxt "#30010"
+msgid "Colors"
+msgstr ""
+
+#. Group name
+#: settings.xml
+msgctxt "#30011"
+msgid "Matrix raining"
+msgstr ""
+
+#. Slider
+#: settings.xml
+msgctxt "#30012"
+msgid "Red"
+msgstr ""
+
+#. Slider help
+#: settings.xml
+msgctxt "#30013"
+msgid "Strength of red color in the rain"
+msgstr ""
+
+#. Slider
+#: settings.xml
+msgctxt "#30014"
+msgid "Green"
+msgstr ""
+
+#. Slider help
+#: settings.xml
+msgctxt "#30015"
+msgid "Strength of green color in the rain"
+msgstr ""
+
+#. Slider
+#: settings.xml
+msgctxt "#30016"
+msgid "Blue"
+msgstr ""
+
+#. Slider help
+#: settings.xml
+msgctxt "#30017"
+msgid "Strength of blue color in the rain"
+msgstr ""
+
+#. Group name
+#: settings.xml
+msgctxt "#30018"
+msgid "Matrix rain event"
+msgstr ""
+
+#. Slider
+#: settings.xml
+msgctxt "#30019"
+msgid "Red"
+msgstr ""
+
+#. Slider help
+#: settings.xml
+msgctxt "#30020"
+msgid "Strength of red color on a event"
+msgstr ""
+
+#. Slider
+#: settings.xml
+msgctxt "#30021"
+msgid "Green"
+msgstr ""
+
+#. Slider help
+#: settings.xml
+msgctxt "#30022"
+msgid "Strength of green color on a event"
+msgstr ""
+
+#. Slider
+#: settings.xml
+msgctxt "#30023"
+msgid "Blue"
+msgstr ""
+
+#. Slider help
+#: settings.xml
+msgctxt "#30024"
+msgid "Strength of blue color on a event"
+msgstr ""

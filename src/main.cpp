@@ -67,6 +67,12 @@ CScreensaverMatrixTrails::CScreensaverMatrixTrails()
   m_config.SetDefaults();
   m_config.m_NumColumns = kodi::GetSettingInt("columns");
   m_config.m_NumRows = kodi::GetSettingInt("rows");
+  m_config.m_CharCol.r = kodi::GetSettingFloat("rain-red") / 100.0f;
+  m_config.m_CharCol.g = kodi::GetSettingFloat("rain-green") / 100.0f;
+  m_config.m_CharCol.b = kodi::GetSettingFloat("rain-blue") / 100.0f;
+  m_config.m_CharEventCol.r = kodi::GetSettingFloat("event-red") / 100.0f;
+  m_config.m_CharEventCol.g = kodi::GetSettingFloat("event-green") / 100.0f;
+  m_config.m_CharEventCol.b = kodi::GetSettingFloat("event-blue") / 100.0f;
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -133,6 +139,7 @@ void CConfig::SetDefaults()
   m_NumColumns = 200;
   m_NumRows = 40;
   m_CharCol.Set(0.0f, 1.0f, 0.0f, 1.0f);
+  m_CharEventCol.Set(0.8f, 1.0f, 0.9f, 1.0f);
 
   m_NumChars = 32;
   m_CharSizeTex.x = 32.0f/TEXTURESIZE;

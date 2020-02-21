@@ -24,6 +24,7 @@ public:
   int m_NumRows; // Number of character rows
 
   CRGBA m_CharCol;
+  CRGBA m_CharEventCol;
   f32 m_FadeSpeedMin; // How quickly the characters fade out
   f32 m_FadeSpeedMax;
   f32 m_CharDelayMin; // How long we wait before we add a new char
