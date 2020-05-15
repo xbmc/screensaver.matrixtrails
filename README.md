@@ -2,6 +2,7 @@
 
 This is a [Kodi](https://kodi.tv) screensaver addon.
 
+[![License: GPL-2.0-or-later](https://img.shields.io/badge/License-GPL%20v2+-blue.svg)](LICENSE.md)
 [![Build Status](https://travis-ci.org/xbmc/screensaver.matrixtrails.svg?branch=Matrix)](https://travis-ci.org/xbmc/screensaver.matrixtrails/branches)
 [![Build Status](https://ci.appveyor.com/api/projects/status/github/xbmc/screensaver.matrixtrails?branch=Matrix&svg=true)](https://ci.appveyor.com/project/xbmc/screensaver-matrixtrails?branch=Matrix)
 
