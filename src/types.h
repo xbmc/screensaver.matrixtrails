@@ -1,12 +1,10 @@
-////////////////////////////////////////////////////////////////////////////
-// This contains the types and math classes that I'm used to work with.
-// They have been stipped of most unneeded stuff that isn't needed in 
-// the screensaver
-//
-// Author:
-//   Joakim Eriksson
-//
-////////////////////////////////////////////////////////////////////////////
+/*
+ *  Copyright (C) 2005-2020 Team Kodi (https://kodi.tv)
+ *  Copyright (C) 2005 Joakim Eriksson <je@plane9.com>
+ *
+ *  SPDX-License-Identifier: GPL-2.0-or-later
+ *  See LICENSE.md for more information.
+ */
 
 #pragma once
 

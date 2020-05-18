@@ -2,8 +2,10 @@
 
 This is a [Kodi](https://kodi.tv) screensaver addon.
 
+[![License: GPL-2.0-or-later](https://img.shields.io/badge/License-GPL%20v2+-blue.svg)](LICENSE.md)
 [![Build Status](https://travis-ci.org/xbmc/screensaver.matrixtrails.svg?branch=Matrix)](https://travis-ci.org/xbmc/screensaver.matrixtrails/branches)
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/xbmc/screensaver.matrixtrails?branch=Matrix&svg=true)](https://ci.appveyor.com/project/xbmc/screensaver-matrixtrails?branch=Matrix)
+[![Build Status](https://dev.azure.com/teamkodi/binary-addons/_apis/build/status/xbmc.screensaver.matrixtrails?branchName=Leia)](https://dev.azure.com/teamkodi/binary-addons/_build/latest?definitionId=45&branchName=Leia)
+[![Build Status](https://jenkins.kodi.tv/view/Addons/job/xbmc/job/screensaver.matrixtrails/job/Matrix/badge/icon)](https://jenkins.kodi.tv/blue/organizations/jenkins/xbmc%2Fscreensaver.matrixtrails/branches/)
 
 ## Build instructions
 

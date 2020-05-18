@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="screensaver.matrixtrails"
-  version="2.4.1"
+  version="2.4.2"
   name="Matrix trails"
   provider-name="spiff">
   <requires>@ADDON_DEPENDS@</requires>
@@ -12,7 +12,7 @@
     <summary lang="en_GB">Matrix trails screensaver</summary>
     <description lang="en_GB">The "digital rain" effect, as seen on the computer monitors in "The Matrix".</description>
     <platform>@PLATFORM@</platform>
-    <license>GPL-2.0</license>
+    <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/screensaver.matrixtrails</source>
     <assets>
       <icon>resources/icon.png</icon>
