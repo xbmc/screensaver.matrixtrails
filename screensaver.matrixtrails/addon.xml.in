@@ -9,7 +9,9 @@
     point="xbmc.ui.screensaver"
     library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
+    <summary lang="de_DE">Matrix Regen Bildschirmschoner</summary>
     <summary lang="en_GB">Matrix trails screensaver</summary>
+    <description lang="de_DE">Der "digitale Regen" Effekt, wie er auf den Computermonitoren in "Matrix" zu sehen ist.</description>
     <description lang="en_GB">The "digital rain" effect, as seen on the computer monitors in "The Matrix".</description>
     <platform>@PLATFORM@</platform>
     <license>GPL-2.0-or-later</license>
