@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
   id="screensaver.matrixtrails"
-  version="2.4.2"
+  version="2.5.0"
   name="Matrix trails"
   provider-name="spiff">
   <requires>@ADDON_DEPENDS@</requires>
@@ -9,17 +9,19 @@
     point="xbmc.ui.screensaver"
     library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
+    <summary lang="de_DE">Matrix Regen Bildschirmschoner</summary>
     <summary lang="en_GB">Matrix trails screensaver</summary>
+    <description lang="de_DE">Der "digitale Regen" Effekt, wie er auf den Computermonitoren in "Matrix" zu sehen ist.</description>
     <description lang="en_GB">The "digital rain" effect, as seen on the computer monitors in "The Matrix".</description>
     <platform>@PLATFORM@</platform>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/screensaver.matrixtrails</source>
     <assets>
       <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.png</fanart>
-      <screenshot>resources/screenshot-01.png</screenshot>
-      <screenshot>resources/screenshot-02.png</screenshot>
-      <screenshot>resources/screenshot-01.png</screenshot>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screenshot-01.jpg</screenshot>
+      <screenshot>resources/screenshot-02.jpg</screenshot>
+      <screenshot>resources/screenshot-01.jpg</screenshot>
     </assets>
   </extension>
 </addon>
