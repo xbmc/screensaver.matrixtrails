@@ -67,12 +67,12 @@ CScreensaverMatrixTrails::CScreensaverMatrixTrails()
   m_config.SetDefaults();
   m_config.m_NumColumns = kodi::GetSettingInt("columns");
   m_config.m_NumRows = kodi::GetSettingInt("rows");
-  m_config.m_CharCol.r = kodi::GetSettingFloat("rain-red") / 100.0f;
-  m_config.m_CharCol.g = kodi::GetSettingFloat("rain-green") / 100.0f;
-  m_config.m_CharCol.b = kodi::GetSettingFloat("rain-blue") / 100.0f;
-  m_config.m_CharEventCol.r = kodi::GetSettingFloat("event-red") / 100.0f;
-  m_config.m_CharEventCol.g = kodi::GetSettingFloat("event-green") / 100.0f;
-  m_config.m_CharEventCol.b = kodi::GetSettingFloat("event-blue") / 100.0f;
+  m_config.m_CharCol.r = float(kodi::GetSettingInt("rain-red")) / 100.0f;
+  m_config.m_CharCol.g = float(kodi::GetSettingInt("rain-green")) / 100.0f;
+  m_config.m_CharCol.b = float(kodi::GetSettingInt("rain-blue")) / 100.0f;
+  m_config.m_CharEventCol.r = float(kodi::GetSettingInt("event-red")) / 100.0f;
+  m_config.m_CharEventCol.g = float(kodi::GetSettingInt("event-green")) / 100.0f;
+  m_config.m_CharEventCol.b = float(kodi::GetSettingInt("event-blue")) / 100.0f;
 }
 
 ////////////////////////////////////////////////////////////////////////////
