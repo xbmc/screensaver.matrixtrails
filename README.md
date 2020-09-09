@@ -1,13 +1,13 @@
 # screensaver.matrixtrails addon for Kodi
 
-This is a [Kodi](https://kodi.tv) screensaver addon.
+This is a [Kodi](https://kodi.tv) screensaver addon, with the "digital rain" effect, as seen on the computer monitors in "The Matrix".
+
+![screenshot](https://raw.githubusercontent.com/xbmc/screensaver.matrixtrails/Matrix/screensaver.matrixtrails/resources/fanart.jpg)
 
 [![License: GPL-2.0-or-later](https://img.shields.io/badge/License-GPL%20v2+-blue.svg)](LICENSE.md)
 [![Build Status](https://travis-ci.org/xbmc/screensaver.matrixtrails.svg?branch=Matrix)](https://travis-ci.org/xbmc/screensaver.matrixtrails/branches)
 [![Build Status](https://dev.azure.com/teamkodi/binary-addons/_apis/build/status/xbmc.screensaver.matrixtrails?branchName=Matrix)](https://dev.azure.com/teamkodi/binary-addons/_build/latest?definitionId=45&branchName=Matrix)
 [![Build Status](https://jenkins.kodi.tv/view/Addons/job/xbmc/job/screensaver.matrixtrails/job/Matrix/badge/icon)](https://jenkins.kodi.tv/blue/organizations/jenkins/xbmc%2Fscreensaver.matrixtrails/branches/)
-
-![screenshot](https://raw.githubusercontent.com/xbmc/screensaver.matrixtrails/Matrix/screensaver.matrixtrails/resources/fanart.jpg)
 
 ## Build instructions
 
