@@ -1,10 +1,10 @@
-////////////////////////////////////////////////////////////////////////////
-// A column of chars
-//
-// Author:
-//   Joakim Eriksson
-//
-////////////////////////////////////////////////////////////////////////////
+/*
+ *  Copyright (C) 2005-2020 Team Kodi (https://kodi.tv)
+ *  Copyright (C) 2005 Joakim Eriksson <je@plane9.com>
+ *
+ *  SPDX-License-Identifier: GPL-2.0-or-later
+ *  See LICENSE.md for more information.
+ */
 
 #include "main.h"
 #include "matrixtrails.h"

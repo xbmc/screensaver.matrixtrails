@@ -36,61 +36,31 @@
     </category>
     <category id="colors" label="30010" help="0">
       <group id="2" label="30011">
-        <setting id="rain-red" type="number" label="30012" help="30013">
-          <default>0.0</default>
-          <constraints>
-            <minimum>0.0</minimum>
-            <step>10.0</step>
-            <maximum>100.0</maximum>
-          </constraints>
-          <control type="slider" format="percentage" />
+        <setting id="rain-red" type="integer" label="30012" help="30013">
+          <default>0</default>
+          <control type="slider" format="percentage" range="0,100" />
         </setting>
-        <setting id="rain-green" type="number" label="30014" help="30015">
-          <default>100.0</default>
-          <constraints>
-            <minimum>0.0</minimum>
-            <step>10.0</step>
-            <maximum>100.0</maximum>
-          </constraints>
-          <control type="slider" format="percentage" />
+        <setting id="rain-green" type="integer" label="30014" help="30015">
+          <default>100</default>
+          <control type="slider" format="percentage" range="0,100" />
         </setting>
-        <setting id="rain-blue" type="number" label="30016" help="30017">
-          <default>0.0</default>
-          <constraints>
-            <minimum>0.0</minimum>
-            <step>10.0</step>
-            <maximum>100.0</maximum>
-          </constraints>
-          <control type="slider" format="percentage" />
+        <setting id="rain-blue" type="integer" label="30016" help="30017">
+          <default>0</default>
+          <control type="slider" format="percentage" range="0,100" />
         </setting>
       </group>
       <group id="3" label="30018">
-        <setting id="event-red" type="number" label="30019" help="30020">
-          <default>80.0</default>
-          <constraints>
-            <minimum>0.0</minimum>
-            <step>10.0</step>
-            <maximum>100.0</maximum>
-          </constraints>
-          <control type="slider" format="percentage" />
+        <setting id="event-red" type="integer" label="30019" help="30020">
+          <default>80</default>
+          <control type="slider" format="percentage" range="0,100" />
         </setting>
-        <setting id="event-green" type="number" label="30021" help="30022">
-          <default>100.0</default>
-          <constraints>
-            <minimum>0.0</minimum>
-            <step>10.0</step>
-            <maximum>100.0</maximum>
-          </constraints>
-          <control type="slider" format="percentage" />
+        <setting id="event-green" type="integer" label="30021" help="30022">
+          <default>100</default>
+          <control type="slider" format="percentage" range="0,100" />
         </setting>
-        <setting id="event-blue" type="number" label="30023" help="30024">
-          <default>90.0</default>
-          <constraints>
-            <minimum>0.0</minimum>
-            <step>10.0</step>
-            <maximum>100.0</maximum>
-          </constraints>
-          <control type="slider" format="percentage" />
+        <setting id="event-blue" type="integer" label="30023" help="30024">
+          <default>90</default>
+          <control type="slider" format="percentage" range="0,100" />
         </setting>
       </group>
     </category>

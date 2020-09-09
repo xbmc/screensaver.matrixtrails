@@ -1,31 +1,10 @@
-////////////////////////////////////////////////////////////////////////////
-//
-// Matrix Trails Screensaver for XBox Media Center
-// Copyright (c) 2005 Joakim Eriksson <je@plane9.com>
-//
-// Thanks goes to Warren for his 'TestXBS' program!
-// Matrix Symbol Font by Lexandr (mCode 1.5 - http://www.deviantart.com/deviation/2040700/)
-//
-// To run the screensaver copy over the MatrixTrails.xbs, MatrixTrails.tga
-// and MatrixTrails.xml to the screensaver dir in xbmc
-//
-////////////////////////////////////////////////////////////////////////////
-//
-// This program is free software; you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation; either version 2 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program; if not, write to the Free Software
-// Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
-//
-////////////////////////////////////////////////////////////////////////////
+/*
+ *  Copyright (C) 2005-2020 Team Kodi (https://kodi.tv)
+ *  Copyright (C) 2005 Joakim Eriksson <je@plane9.com>
+ *
+ *  SPDX-License-Identifier: GPL-2.0-or-later
+ *  See LICENSE.md for more information.
+ */
 
 #include "main.h"
 #include "matrixtrails.h"
@@ -67,12 +46,12 @@ CScreensaverMatrixTrails::CScreensaverMatrixTrails()
   m_config.SetDefaults();
   m_config.m_NumColumns = kodi::GetSettingInt("columns");
   m_config.m_NumRows = kodi::GetSettingInt("rows");
-  m_config.m_CharCol.r = kodi::GetSettingFloat("rain-red") / 100.0f;
-  m_config.m_CharCol.g = kodi::GetSettingFloat("rain-green") / 100.0f;
-  m_config.m_CharCol.b = kodi::GetSettingFloat("rain-blue") / 100.0f;
-  m_config.m_CharEventCol.r = kodi::GetSettingFloat("event-red") / 100.0f;
-  m_config.m_CharEventCol.g = kodi::GetSettingFloat("event-green") / 100.0f;
-  m_config.m_CharEventCol.b = kodi::GetSettingFloat("event-blue") / 100.0f;
+  m_config.m_CharCol.r = float(kodi::GetSettingInt("rain-red")) / 100.0f;
+  m_config.m_CharCol.g = float(kodi::GetSettingInt("rain-green")) / 100.0f;
+  m_config.m_CharCol.b = float(kodi::GetSettingInt("rain-blue")) / 100.0f;
+  m_config.m_CharEventCol.r = float(kodi::GetSettingInt("event-red")) / 100.0f;
+  m_config.m_CharEventCol.g = float(kodi::GetSettingInt("event-green")) / 100.0f;
+  m_config.m_CharEventCol.b = float(kodi::GetSettingInt("event-blue")) / 100.0f;
 }
 
 ////////////////////////////////////////////////////////////////////////////
