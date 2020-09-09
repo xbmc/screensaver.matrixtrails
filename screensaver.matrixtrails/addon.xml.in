@@ -26,6 +26,8 @@ In its settings you can also define your own colors and sizes of rain.</descript
       <screenshot>resources/screenshot-01.jpg</screenshot>
       <screenshot>resources/screenshot-02.jpg</screenshot>
       <screenshot>resources/screenshot-01.jpg</screenshot>
+      <screenshot>resources/screenshot-03.jpg</screenshot>
+      <screenshot>resources/screenshot-04.jpg</screenshot>
     </assets>
   </extension>
 </addon>
