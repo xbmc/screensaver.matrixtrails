@@ -7,6 +7,8 @@ This is a [Kodi](https://kodi.tv) screensaver addon.
 [![Build Status](https://dev.azure.com/teamkodi/binary-addons/_apis/build/status/xbmc.screensaver.matrixtrails?branchName=Leia)](https://dev.azure.com/teamkodi/binary-addons/_build/latest?definitionId=45&branchName=Leia)
 [![Build Status](https://jenkins.kodi.tv/view/Addons/job/xbmc/job/screensaver.matrixtrails/job/Matrix/badge/icon)](https://jenkins.kodi.tv/blue/organizations/jenkins/xbmc%2Fscreensaver.matrixtrails/branches/)
 
+![screenshot](https://raw.githubusercontent.com/xbmc/screensaver.matrixtrails/Matrix/screensaver.matrixtrails/resources/fanart.jpg)
+
 ## Build instructions
 
 When building the addon you have to use the correct branch depending on which version of Kodi you're building against.
