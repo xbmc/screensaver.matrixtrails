@@ -18,6 +18,16 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
 
+msgctxt "Addon Summary"
+msgid "Matrix trails screensaver"
+msgstr ""
+
+msgctxt "Addon Description"
+msgid "The "digital rain" effect, as seen on the computer monitors in "The Matrix".
+
+In its settings you can also define your own colors and sizes of rain."
+msgstr ""
+
 #. Slider to select amount of colums
 #: settings.xml
 msgctxt "#30000"
