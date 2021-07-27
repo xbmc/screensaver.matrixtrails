@@ -26,133 +26,111 @@ msgid "The \"digital rain\" effect, as seen on the computer monitors in \"The Ma
 msgstr ""
 
 #. Slider to select amount of colums
-#: settings.xml
 msgctxt "#30000"
 msgid "Number of columns"
 msgstr "מספר העמודות"
 
 #. Slider to select amount of colums
-#: settings.xml
 msgctxt "#30001"
 msgid "Number of rows"
 msgstr "מספר השורות"
 
 #. Spin to select speed
-#: settings.xml
 msgctxt "#30002"
 msgid "Speed"
 msgstr "מהירות"
 
 #. Multiply value of selected speed
-#: settings.xml
 msgctxt "#30003"
 msgid "{0:d}x"
 msgstr "{0:d}x"
 
 #. Slider help to select amount of colums on 30000
-#: settings.xml
 msgctxt "#30004"
 msgid "Number of columns to show on screen."
 msgstr "מספר העמודות להצגה על המסך."
 
 #. Slider help to select amount of colums on 30001
-#: settings.xml
 msgctxt "#30005"
 msgid "Number of rows to show on screen."
 msgstr "מספר השורות להצגה על המסך."
 
 #. Spin help to select speed on 30002
-#: settings.xml
 msgctxt "#30006"
 msgid "Accelerate how fast lines move down."
 msgstr "האצת קצב ירידת השורות."
 
 #. Category name
-#: settings.xml
 msgctxt "#30010"
 msgid "Colors"
 msgstr "צבעים"
 
 #. Group name
-#: settings.xml
 msgctxt "#30011"
 msgid "Matrix raining"
 msgstr "גשם מטריקס"
 
 #. Slider
-#: settings.xml
 msgctxt "#30012"
 msgid "Red"
 msgstr "אדום"
 
 #. Slider help
-#: settings.xml
 msgctxt "#30013"
 msgid "Strength of red color in the rain."
 msgstr "עצמת הצבע האדום בגשם."
 
 #. Slider
-#: settings.xml
 msgctxt "#30014"
 msgid "Green"
 msgstr "ירוק"
 
 #. Slider help
-#: settings.xml
 msgctxt "#30015"
 msgid "Strength of green color in the rain."
 msgstr "עצמת הצבע הירוק בגשם."
 
 #. Slider
-#: settings.xml
 msgctxt "#30016"
 msgid "Blue"
 msgstr "כחול"
 
 #. Slider help
-#: settings.xml
 msgctxt "#30017"
 msgid "Strength of blue color in the rain."
 msgstr "עצמת הצבע הכחול בגשם."
 
 #. Group name
-#: settings.xml
 msgctxt "#30018"
 msgid "Matrix rain event"
 msgstr "אירוע גשם מטריקס"
 
 #. Slider
-#: settings.xml
 msgctxt "#30019"
 msgid "Red"
 msgstr "אדום"
 
 #. Slider help
-#: settings.xml
 msgctxt "#30020"
 msgid "Strength of red color on a event."
 msgstr "עצמת הצבע האדום באירוע."
 
 #. Slider
-#: settings.xml
 msgctxt "#30021"
 msgid "Green"
 msgstr "ירוק"
 
 #. Slider help
-#: settings.xml
 msgctxt "#30022"
 msgid "Strength of green color on a event."
 msgstr "עצמת הצבע הירוק באירוע."
 
 #. Slider
-#: settings.xml
 msgctxt "#30023"
 msgid "Blue"
 msgstr "כחול"
 
 #. Slider help
-#: settings.xml
 msgctxt "#30024"
 msgid "Strength of blue color on a event."
 msgstr "עצמת הצבע הכחול באירוע."
