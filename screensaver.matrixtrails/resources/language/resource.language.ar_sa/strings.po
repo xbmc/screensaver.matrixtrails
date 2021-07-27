@@ -5,8 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Addons\n"
-"Report-Msgid-Bugs-To: https://github.com/xbmc/screensaver.matrixtrails/"
-"issues\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/screensaver.matrixtrails/issues\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
@@ -15,8 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 
 msgctxt "Addon Summary"
 msgid "Matrix trails screensaver"
@@ -27,133 +25,111 @@ msgid "The \"digital rain\" effect, as seen on the computer monitors in \"The Ma
 msgstr ""
 
 #. Slider to select amount of colums
-#: settings.xml
 msgctxt "#30000"
 msgid "Number of columns"
 msgstr ""
 
 #. Slider to select amount of colums
-#: settings.xml
 msgctxt "#30001"
 msgid "Number of rows"
 msgstr ""
 
 #. Spin to select speed
-#: settings.xml
 msgctxt "#30002"
 msgid "Speed"
 msgstr ""
 
 #. Multiply value of selected speed
-#: settings.xml
 msgctxt "#30003"
 msgid "{0:d}x"
 msgstr ""
 
 #. Slider help to select amount of colums on 30000
-#: settings.xml
 msgctxt "#30004"
 msgid "Number of columns to show on screen."
 msgstr ""
 
 #. Slider help to select amount of colums on 30001
-#: settings.xml
 msgctxt "#30005"
 msgid "Number of rows to show on screen."
 msgstr ""
 
 #. Spin help to select speed on 30002
-#: settings.xml
 msgctxt "#30006"
 msgid "Accelerate how fast lines move down."
 msgstr ""
 
 #. Category name
-#: settings.xml
 msgctxt "#30010"
 msgid "Colors"
 msgstr ""
 
 #. Group name
-#: settings.xml
 msgctxt "#30011"
 msgid "Matrix raining"
 msgstr ""
 
 #. Slider
-#: settings.xml
 msgctxt "#30012"
 msgid "Red"
 msgstr ""
 
 #. Slider help
-#: settings.xml
 msgctxt "#30013"
 msgid "Strength of red color in the rain."
 msgstr ""
 
 #. Slider
-#: settings.xml
 msgctxt "#30014"
 msgid "Green"
 msgstr ""
 
 #. Slider help
-#: settings.xml
 msgctxt "#30015"
 msgid "Strength of green color in the rain."
 msgstr ""
 
 #. Slider
-#: settings.xml
 msgctxt "#30016"
 msgid "Blue"
 msgstr ""
 
 #. Slider help
-#: settings.xml
 msgctxt "#30017"
 msgid "Strength of blue color in the rain."
 msgstr ""
 
 #. Group name
-#: settings.xml
 msgctxt "#30018"
 msgid "Matrix rain event"
 msgstr ""
 
 #. Slider
-#: settings.xml
 msgctxt "#30019"
 msgid "Red"
 msgstr ""
 
 #. Slider help
-#: settings.xml
 msgctxt "#30020"
 msgid "Strength of red color on a event."
 msgstr ""
 
 #. Slider
-#: settings.xml
 msgctxt "#30021"
 msgid "Green"
 msgstr ""
 
 #. Slider help
-#: settings.xml
 msgctxt "#30022"
 msgid "Strength of green color on a event."
 msgstr ""
 
 #. Slider
-#: settings.xml
 msgctxt "#30023"
 msgid "Blue"
 msgstr ""
 
 #. Slider help
-#: settings.xml
 msgctxt "#30024"
 msgid "Strength of blue color on a event."
 msgstr ""

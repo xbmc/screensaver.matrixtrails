@@ -26,133 +26,111 @@ msgid "The \"digital rain\" effect, as seen on the computer monitors in \"The Ma
 msgstr ""
 
 #. Slider to select amount of colums
-#: settings.xml
 msgctxt "#30000"
 msgid "Number of columns"
 msgstr "Número de columnas"
 
 #. Slider to select amount of colums
-#: settings.xml
 msgctxt "#30001"
 msgid "Number of rows"
 msgstr "Número de filas"
 
 #. Spin to select speed
-#: settings.xml
 msgctxt "#30002"
 msgid "Speed"
 msgstr "Velocidad"
 
 #. Multiply value of selected speed
-#: settings.xml
 msgctxt "#30003"
 msgid "{0:d}x"
 msgstr "{0:d}x"
 
 #. Slider help to select amount of colums on 30000
-#: settings.xml
 msgctxt "#30004"
 msgid "Number of columns to show on screen."
 msgstr "Número de columnas a mostrar en pantalla."
 
 #. Slider help to select amount of colums on 30001
-#: settings.xml
 msgctxt "#30005"
 msgid "Number of rows to show on screen."
 msgstr "Número de filas a mostrar en pantalla."
 
 #. Spin help to select speed on 30002
-#: settings.xml
 msgctxt "#30006"
 msgid "Accelerate how fast lines move down."
 msgstr "Acelera qué tan rápido bajan las líneas."
 
 #. Category name
-#: settings.xml
 msgctxt "#30010"
 msgid "Colors"
 msgstr "Colores"
 
 #. Group name
-#: settings.xml
 msgctxt "#30011"
 msgid "Matrix raining"
 msgstr "Lluvia Matrix"
 
 #. Slider
-#: settings.xml
 msgctxt "#30012"
 msgid "Red"
 msgstr "Rojo"
 
 #. Slider help
-#: settings.xml
 msgctxt "#30013"
 msgid "Strength of red color in the rain."
 msgstr "Intensidad del color rojo en la lluvia."
 
 #. Slider
-#: settings.xml
 msgctxt "#30014"
 msgid "Green"
 msgstr "Verde"
 
 #. Slider help
-#: settings.xml
 msgctxt "#30015"
 msgid "Strength of green color in the rain."
 msgstr "Intensidad del color verde en la lluvia."
 
 #. Slider
-#: settings.xml
 msgctxt "#30016"
 msgid "Blue"
 msgstr "Azul"
 
 #. Slider help
-#: settings.xml
 msgctxt "#30017"
 msgid "Strength of blue color in the rain."
 msgstr "Intensidad del color azul en la lluvia."
 
 #. Group name
-#: settings.xml
 msgctxt "#30018"
 msgid "Matrix rain event"
 msgstr "Evento de lluvia Matrix"
 
 #. Slider
-#: settings.xml
 msgctxt "#30019"
 msgid "Red"
 msgstr "Rojo"
 
 #. Slider help
-#: settings.xml
 msgctxt "#30020"
 msgid "Strength of red color on a event."
 msgstr "Intensidad del color rojo en un evento."
 
 #. Slider
-#: settings.xml
 msgctxt "#30021"
 msgid "Green"
 msgstr "Verde"
 
 #. Slider help
-#: settings.xml
 msgctxt "#30022"
 msgid "Strength of green color on a event."
 msgstr "Intensidad del color verde en un evento."
 
 #. Slider
-#: settings.xml
 msgctxt "#30023"
 msgid "Blue"
 msgstr "Azul"
 
 #. Slider help
-#: settings.xml
 msgctxt "#30024"
 msgid "Strength of blue color on a event."
 msgstr "Intensidad del color azul en un evento."
