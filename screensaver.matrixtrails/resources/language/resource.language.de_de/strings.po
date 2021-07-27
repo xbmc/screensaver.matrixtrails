@@ -17,6 +17,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.7.2\n"
 
+msgctxt "Addon Summary"
+msgid "Matrix trails screensaver"
+msgstr "Matrix Regen Bildschirmschoner"
+
+msgctxt "Addon Description"
+msgid "The \"digital rain\" effect, as seen on the computer monitors in \"The Matrix\".[CR][CR]In its settings you can also define your own colors and sizes of rain."
+msgstr "Der \"digitale Regen\" Effekt, wie er auf den Computermonitoren in \"Matrix\" zu sehen ist.[CR][CR]In seinen Einstellungen kannst du auch eigene Farben und Größen des Regens bestimmen."
+
 #. Slider to select amount of colums
 msgctxt "#30000"
 msgid "Number of columns"
