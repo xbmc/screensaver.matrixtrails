@@ -9,10 +9,6 @@
     point="xbmc.ui.screensaver"
     library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
-    <summary lang="de_DE">Matrix Regen Bildschirmschoner</summary>
-    <summary lang="en_GB">Matrix trails screensaver</summary>
-    <description lang="de_DE">Der &quot;digitale Regen&quot; Effekt, wie er auf den Computermonitoren in &quot;Matrix&quot; zu sehen ist.[CR][CR]In seinen Einstellungen kannst du auch eigene Farben und Größen des Regens bestimmen.</description>
-    <description lang="en_GB">The &quot;digital rain&quot; effect, as seen on the computer monitors in &quot;The Matrix&quot;.[CR][CR]In its settings you can also define your own colors and sizes of rain.</description>
     <platform>@PLATFORM@</platform>
     <license>GPL-2.0-or-later</license>
     <source>https://github.com/xbmc/screensaver.matrixtrails</source>
@@ -25,5 +21,9 @@
       <screenshot>resources/screenshot-03.jpg</screenshot>
       <screenshot>resources/screenshot-04.jpg</screenshot>
     </assets>
+    <summary lang="de_DE">Matrix Regen Bildschirmschoner</summary>
+    <summary lang="en_GB">Matrix trails screensaver</summary>
+    <description lang="de_DE">Der &quot;digitale Regen&quot; Effekt, wie er auf den Computermonitoren in &quot;Matrix&quot; zu sehen ist.[CR][CR]In seinen Einstellungen kannst du auch eigene Farben und Größen des Regens bestimmen.</description>
+    <description lang="en_GB">The &quot;digital rain&quot; effect, as seen on the computer monitors in &quot;The Matrix&quot;.[CR][CR]In its settings you can also define your own colors and sizes of rain.</description>
   </extension>
 </addon>
