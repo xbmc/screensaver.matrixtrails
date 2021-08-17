@@ -21,8 +21,10 @@
       <screenshot>resources/screenshot-03.jpg</screenshot>
       <screenshot>resources/screenshot-04.jpg</screenshot>
     </assets>
+    <summary lang="da_DK">Matrix-stier pauseskærm</summary>
     <summary lang="de_DE">Matrix Regen Bildschirmschoner</summary>
     <summary lang="en_GB">Matrix trails screensaver</summary>
+    <description lang="da_DK">Den &quot;digitale regn&quot;-effekt, som ses på computerskærme i &quot;The Matrix&quot;.[CR][CR]I indstillingerne kan du også definere dine egne farver og størrelser på regn.</description>
     <description lang="de_DE">Der &quot;digitale Regen&quot; Effekt, wie er auf den Computermonitoren in &quot;Matrix&quot; zu sehen ist.[CR][CR]In seinen Einstellungen kannst du auch eigene Farben und Größen des Regens bestimmen.</description>
     <description lang="en_GB">The &quot;digital rain&quot; effect, as seen on the computer monitors in &quot;The Matrix&quot;.[CR][CR]In its settings you can also define your own colors and sizes of rain.</description>
   </extension>
