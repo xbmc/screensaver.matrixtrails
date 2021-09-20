@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2005-2020 Team Kodi (https://kodi.tv)
+ *  Copyright (C) 2005-2021 Team Kodi (https://kodi.tv)
  *  Copyright (C) 2005 Joakim Eriksson <je@plane9.com>
  *
  *  SPDX-License-Identifier: GPL-2.0-or-later
