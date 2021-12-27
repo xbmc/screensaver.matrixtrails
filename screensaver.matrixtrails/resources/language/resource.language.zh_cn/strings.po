@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Addons\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-09-17 04:30+0000\n"
+"PO-Revision-Date: 2021-10-25 09:32+0000\n"
 "Last-Translator: taxigps <taxigps@sina.com>\n"
 "Language-Team: Chinese (China) <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/screensaver-matrixtrails/zh_cn/>\n"
 "Language: zh_cn\n"
@@ -93,7 +93,7 @@ msgstr "雨中绿色的强度。"
 #. Slider
 msgctxt "#30016"
 msgid "Blue"
-msgstr "兰色"
+msgstr "蓝色"
 
 #. Slider help
 msgctxt "#30017"
