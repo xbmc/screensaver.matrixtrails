@@ -18,7 +18,7 @@
 
 #define TEXTURESIZE 256  // Width & height of the texture we are using
 
-class ATTRIBUTE_HIDDEN CScreensaverMatrixTrails
+class ATTR_DLL_LOCAL CScreensaverMatrixTrails
   : public kodi::addon::CAddonBase,
     public kodi::addon::CInstanceScreensaver
 {
@@ -44,14 +44,14 @@ CScreensaverMatrixTrails::CScreensaverMatrixTrails()
     m_timer(nullptr)
 {
   m_config.SetDefaults();
-  m_config.m_NumColumns = kodi::GetSettingInt("columns");
-  m_config.m_NumRows = kodi::GetSettingInt("rows");
-  m_config.m_CharCol.r = kodi::GetSettingFloat("rain-red") / 100.0f;
-  m_config.m_CharCol.g = kodi::GetSettingFloat("rain-green") / 100.0f;
-  m_config.m_CharCol.b = kodi::GetSettingFloat("rain-blue") / 100.0f;
-  m_config.m_CharEventCol.r = kodi::GetSettingFloat("event-red") / 100.0f;
-  m_config.m_CharEventCol.g = kodi::GetSettingFloat("event-green") / 100.0f;
-  m_config.m_CharEventCol.b = kodi::GetSettingFloat("event-blue") / 100.0f;
+  m_config.m_NumColumns = kodi::addon::GetSettingInt("columns");
+  m_config.m_NumRows = kodi::addon::GetSettingInt("rows");
+  m_config.m_CharCol.r = kodi::addon::GetSettingFloat("rain-red") / 100.0f;
+  m_config.m_CharCol.g = kodi::addon::GetSettingFloat("rain-green") / 100.0f;
+  m_config.m_CharCol.b = kodi::addon::GetSettingFloat("rain-blue") / 100.0f;
+  m_config.m_CharEventCol.r = kodi::addon::GetSettingFloat("event-red") / 100.0f;
+  m_config.m_CharEventCol.g = kodi::addon::GetSettingFloat("event-green") / 100.0f;
+  m_config.m_CharEventCol.b = kodi::addon::GetSettingFloat("event-blue") / 100.0f;
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -66,8 +66,8 @@ bool CScreensaverMatrixTrails::Start()
     return false;
   m_timer = new CTimer();
   m_timer->Init();
-  m_timer->SetSpeed(static_cast<f32>(kodi::GetSettingInt("speed")));
-  std::string path = kodi::GetAddonPath() + "/resources/MatrixTrails.tga";
+  m_timer->SetSpeed(static_cast<f32>(kodi::addon::GetSettingInt("speed")));
+  std::string path = kodi::addon::GetAddonPath() + "/resources/MatrixTrails.tga";
   if (!m_matrixTrails->RestoreDevice(path))
   {
     Stop();

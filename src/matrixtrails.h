@@ -27,7 +27,7 @@ typedef struct TRenderVertex
 
 ////////////////////////////////////////////////////////////////////////////
 //
-class ATTRIBUTE_HIDDEN CMatrixTrails : public kodi::gui::gl::CShaderProgram
+class ATTR_DLL_LOCAL CMatrixTrails : public kodi::gui::gl::CShaderProgram
 {
 public:
   CMatrixTrails(CConfig* config);
