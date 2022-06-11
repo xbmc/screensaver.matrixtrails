@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Addons\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-05-19 18:14+0000\n"
+"PO-Revision-Date: 2022-06-11 11:14+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/screensaver-matrixtrails/es_es/>\n"
 "Language: es_es\n"
@@ -108,7 +108,7 @@ msgstr ""
 #. Slider
 msgctxt "#30019"
 msgid "Red"
-msgstr ""
+msgstr "Rojo"
 
 #. Slider help
 msgctxt "#30020"
@@ -118,7 +118,7 @@ msgstr ""
 #. Slider
 msgctxt "#30021"
 msgid "Green"
-msgstr ""
+msgstr "Verde"
 
 #. Slider help
 msgctxt "#30022"
@@ -128,7 +128,7 @@ msgstr ""
 #. Slider
 msgctxt "#30023"
 msgid "Blue"
-msgstr ""
+msgstr "Azul"
 
 #. Slider help
 msgctxt "#30024"
