@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Addons\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-03-09 13:42+0000\n"
+"PO-Revision-Date: 2022-06-27 09:14+0000\n"
 "Last-Translator: Christian Gade <gade@kodi.tv>\n"
 "Language-Team: French (France) <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/screensaver-matrixtrails/fr_fr/>\n"
 "Language: fr_fr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.11.2\n"
+"X-Generator: Weblate 4.13\n"
 
 msgctxt "Addon Summary"
 msgid "Matrix trails screensaver"
@@ -63,7 +63,7 @@ msgstr ""
 #. Category name
 msgctxt "#30010"
 msgid "Colors"
-msgstr ""
+msgstr "Couleurs"
 
 #. Group name
 msgctxt "#30011"
@@ -73,7 +73,7 @@ msgstr ""
 #. Slider
 msgctxt "#30012"
 msgid "Red"
-msgstr ""
+msgstr "Rouge"
 
 #. Slider help
 msgctxt "#30013"
@@ -83,7 +83,7 @@ msgstr ""
 #. Slider
 msgctxt "#30014"
 msgid "Green"
-msgstr ""
+msgstr "Vert"
 
 #. Slider help
 msgctxt "#30015"
@@ -93,7 +93,7 @@ msgstr ""
 #. Slider
 msgctxt "#30016"
 msgid "Blue"
-msgstr ""
+msgstr "Bleu"
 
 #. Slider help
 msgctxt "#30017"
@@ -108,7 +108,7 @@ msgstr ""
 #. Slider
 msgctxt "#30019"
 msgid "Red"
-msgstr ""
+msgstr "Rouge"
 
 #. Slider help
 msgctxt "#30020"
@@ -118,7 +118,7 @@ msgstr ""
 #. Slider
 msgctxt "#30021"
 msgid "Green"
-msgstr ""
+msgstr "Vert"
 
 #. Slider help
 msgctxt "#30022"
@@ -128,7 +128,7 @@ msgstr ""
 #. Slider
 msgctxt "#30023"
 msgid "Blue"
-msgstr ""
+msgstr "Bleu"
 
 #. Slider help
 msgctxt "#30024"
