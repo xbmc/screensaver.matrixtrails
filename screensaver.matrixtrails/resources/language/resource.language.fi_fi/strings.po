@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Addons\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-07-21 08:30+0000\n"
+"PO-Revision-Date: 2022-08-14 05:14+0000\n"
 "Last-Translator: Oskari Lavinto <olavinto@protonmail.com>\n"
 "Language-Team: Finnish <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/screensaver-matrixtrails/fi_fi/>\n"
 "Language: fi_fi\n"
@@ -63,7 +63,7 @@ msgstr ""
 #. Category name
 msgctxt "#30010"
 msgid "Colors"
-msgstr ""
+msgstr "Värit"
 
 #. Group name
 msgctxt "#30011"
@@ -108,7 +108,7 @@ msgstr ""
 #. Slider
 msgctxt "#30019"
 msgid "Red"
-msgstr ""
+msgstr "Punainen"
 
 #. Slider help
 msgctxt "#30020"
@@ -118,7 +118,7 @@ msgstr ""
 #. Slider
 msgctxt "#30021"
 msgid "Green"
-msgstr ""
+msgstr "Vihreä"
 
 #. Slider help
 msgctxt "#30022"
@@ -128,7 +128,7 @@ msgstr ""
 #. Slider
 msgctxt "#30023"
 msgid "Blue"
-msgstr ""
+msgstr "Sininen"
 
 #. Slider help
 msgctxt "#30024"
