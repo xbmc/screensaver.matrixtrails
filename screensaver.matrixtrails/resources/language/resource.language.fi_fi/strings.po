@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Addons\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-08-14 05:14+0000\n"
+"PO-Revision-Date: 2022-08-26 12:14+0000\n"
 "Last-Translator: Oskari Lavinto <olavinto@protonmail.com>\n"
 "Language-Team: Finnish <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/screensaver-matrixtrails/fi_fi/>\n"
 "Language: fi_fi\n"
@@ -19,21 +19,21 @@ msgstr ""
 
 msgctxt "Addon Summary"
 msgid "Matrix trails screensaver"
-msgstr ""
+msgstr "Matrix-jäljet-näytönsäästäjä"
 
 msgctxt "Addon Description"
 msgid "The \"digital rain\" effect, as seen on the computer monitors in \"The Matrix\".[CR][CR]In its settings you can also define your own colors and sizes of rain."
-msgstr ""
+msgstr "\"The Matrix\" -elokuvan tietokonenäytöiltä tuttu \"digitaalinen sade\" -tehoste.[CR][CR]Lisäosan asetuksista voit myös määrittää sateelle omat värit ja koot."
 
 #. Slider to select amount of colums
 msgctxt "#30000"
 msgid "Number of columns"
-msgstr ""
+msgstr "Sarakkeiden määrä"
 
 #. Slider to select amount of colums
 msgctxt "#30001"
 msgid "Number of rows"
-msgstr ""
+msgstr "Rivien määrä"
 
 #. Spin to select speed
 msgctxt "#30002"
@@ -43,22 +43,22 @@ msgstr "Nopeus"
 #. Multiply value of selected speed
 msgctxt "#30003"
 msgid "{0:d}x"
-msgstr ""
+msgstr "{0:d}x"
 
 #. Slider help to select amount of colums on 30000
 msgctxt "#30004"
 msgid "Number of columns to show on screen."
-msgstr ""
+msgstr "Ruudulla näkyvien sarakkeiden määrä."
 
 #. Slider help to select amount of colums on 30001
 msgctxt "#30005"
 msgid "Number of rows to show on screen."
-msgstr ""
+msgstr "Ruudulla näkyvien rivien määrä."
 
 #. Spin help to select speed on 30002
 msgctxt "#30006"
 msgid "Accelerate how fast lines move down."
-msgstr ""
+msgstr "Kiihdytä rivien laskeutumisnopeutta."
 
 #. Category name
 msgctxt "#30010"
@@ -68,7 +68,7 @@ msgstr "Värit"
 #. Group name
 msgctxt "#30011"
 msgid "Matrix raining"
-msgstr ""
+msgstr "Matrix-sade"
 
 #. Slider
 msgctxt "#30012"
@@ -78,7 +78,7 @@ msgstr "Punainen"
 #. Slider help
 msgctxt "#30013"
 msgid "Strength of red color in the rain."
-msgstr ""
+msgstr "Punaisen värin voimakkuus sateessa."
 
 #. Slider
 msgctxt "#30014"
@@ -88,7 +88,7 @@ msgstr "Vihreä"
 #. Slider help
 msgctxt "#30015"
 msgid "Strength of green color in the rain."
-msgstr ""
+msgstr "Vihreän värin voimakkuus sateessa."
 
 #. Slider
 msgctxt "#30016"
@@ -98,12 +98,12 @@ msgstr "Sininen"
 #. Slider help
 msgctxt "#30017"
 msgid "Strength of blue color in the rain."
-msgstr ""
+msgstr "Sinisen värin voimakkuus sateessa."
 
 #. Group name
 msgctxt "#30018"
 msgid "Matrix rain event"
-msgstr ""
+msgstr "Matrix-sadetehoste"
 
 #. Slider
 msgctxt "#30019"
@@ -113,7 +113,7 @@ msgstr "Punainen"
 #. Slider help
 msgctxt "#30020"
 msgid "Strength of red color on a event."
-msgstr ""
+msgstr "Punaisen värin voimakkuus, kun tapahtuu jotain."
 
 #. Slider
 msgctxt "#30021"
@@ -123,7 +123,7 @@ msgstr "Vihreä"
 #. Slider help
 msgctxt "#30022"
 msgid "Strength of green color on a event."
-msgstr ""
+msgstr "Vihreän värin voimakkuus, kun tapahtuu jotain."
 
 #. Slider
 msgctxt "#30023"
@@ -133,4 +133,4 @@ msgstr "Sininen"
 #. Slider help
 msgctxt "#30024"
 msgid "Strength of blue color on a event."
-msgstr ""
+msgstr "Sinisen värin voimakkuus, kun tapahtuu jotain."
