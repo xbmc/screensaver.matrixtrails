@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Addons\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2023-01-24 20:15+0000\n"
+"PO-Revision-Date: 2023-02-03 08:15+0000\n"
 "Last-Translator: José Antonio Alvarado <jalvarado0.eses@gmail.com>\n"
 "Language-Team: Spanish (Spain) <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/screensaver-matrixtrails/es_es/>\n"
 "Language: es_es\n"
@@ -15,11 +15,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15.1\n"
+"X-Generator: Weblate 4.15.2\n"
 
 msgctxt "Addon Summary"
 msgid "Matrix trails screensaver"
-msgstr ""
+msgstr "Salvapantallas Senderos Matrix"
 
 msgctxt "Addon Description"
 msgid "The \"digital rain\" effect, as seen on the computer monitors in \"The Matrix\".[CR][CR]In its settings you can also define your own colors and sizes of rain."
@@ -28,12 +28,12 @@ msgstr "El efecto \"lluvia digital\", como se ve en los monitores de ordenador e
 #. Slider to select amount of colums
 msgctxt "#30000"
 msgid "Number of columns"
-msgstr ""
+msgstr "Número de columnas"
 
 #. Slider to select amount of colums
 msgctxt "#30001"
 msgid "Number of rows"
-msgstr ""
+msgstr "Número de filas"
 
 #. Spin to select speed
 msgctxt "#30002"
@@ -43,32 +43,32 @@ msgstr "Velocidad"
 #. Multiply value of selected speed
 msgctxt "#30003"
 msgid "{0:d}x"
-msgstr ""
+msgstr "{0:d}x"
 
 #. Slider help to select amount of colums on 30000
 msgctxt "#30004"
 msgid "Number of columns to show on screen."
-msgstr ""
+msgstr "Número de columnas a mostrar en pantalla."
 
 #. Slider help to select amount of colums on 30001
 msgctxt "#30005"
 msgid "Number of rows to show on screen."
-msgstr ""
+msgstr "Número de filas a mostrar en pantalla."
 
 #. Spin help to select speed on 30002
 msgctxt "#30006"
 msgid "Accelerate how fast lines move down."
-msgstr ""
+msgstr "Acelera la velocidad a la que bajan las líneas."
 
 #. Category name
 msgctxt "#30010"
 msgid "Colors"
-msgstr ""
+msgstr "Colores"
 
 #. Group name
 msgctxt "#30011"
 msgid "Matrix raining"
-msgstr ""
+msgstr "Lluvia Matrix"
 
 #. Slider
 msgctxt "#30012"
@@ -78,7 +78,7 @@ msgstr "Rojo"
 #. Slider help
 msgctxt "#30013"
 msgid "Strength of red color in the rain."
-msgstr ""
+msgstr "Intensidad del color rojo en la lluvia."
 
 #. Slider
 msgctxt "#30014"
@@ -88,7 +88,7 @@ msgstr "Verde"
 #. Slider help
 msgctxt "#30015"
 msgid "Strength of green color in the rain."
-msgstr ""
+msgstr "Intensidad del color verde en la lluvia."
 
 #. Slider
 msgctxt "#30016"
@@ -98,12 +98,12 @@ msgstr "Azul"
 #. Slider help
 msgctxt "#30017"
 msgid "Strength of blue color in the rain."
-msgstr ""
+msgstr "Intensidad del color azul en la lluvia."
 
 #. Group name
 msgctxt "#30018"
 msgid "Matrix rain event"
-msgstr ""
+msgstr "Evento de lluvia Matrix"
 
 #. Slider
 msgctxt "#30019"
@@ -113,7 +113,7 @@ msgstr "Rojo"
 #. Slider help
 msgctxt "#30020"
 msgid "Strength of red color on a event."
-msgstr ""
+msgstr "Intensidad del color rojo en un evento."
 
 #. Slider
 msgctxt "#30021"
@@ -123,7 +123,7 @@ msgstr "Verde"
 #. Slider help
 msgctxt "#30022"
 msgid "Strength of green color on a event."
-msgstr ""
+msgstr "Intensidad del color verde en un evento."
 
 #. Slider
 msgctxt "#30023"
@@ -133,4 +133,4 @@ msgstr "Azul"
 #. Slider help
 msgctxt "#30024"
 msgid "Strength of blue color on a event."
-msgstr ""
+msgstr "Intensidad del color azul en un evento."
