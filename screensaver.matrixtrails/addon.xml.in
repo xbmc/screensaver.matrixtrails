@@ -24,10 +24,14 @@
     <summary lang="da_DK">Matrix-stier pauseskærm</summary>
     <summary lang="de_DE">Matrix Regen Bildschirmschoner</summary>
     <summary lang="en_GB">Matrix trails screensaver</summary>
+    <summary lang="es_ES">Salvapantallas Senderos Matrix</summary>
+    <summary lang="fi_FI">Matrix-jäljet-näytönsäästäjä</summary>
     <summary lang="zh_CN">黑客帝国轨迹屏幕保护程序</summary>
     <description lang="da_DK">Den &quot;digitale regn&quot;-effekt, som ses på computerskærme i &quot;The Matrix&quot;.[CR][CR]I indstillingerne kan du også definere dine egne farver og størrelser på regn.</description>
     <description lang="de_DE">Der &quot;digitale Regen&quot; Effekt, wie er auf den Computermonitoren in &quot;Matrix&quot; zu sehen ist.[CR][CR]In seinen Einstellungen kannst du auch eigene Farben und Größen des Regens bestimmen.</description>
     <description lang="en_GB">The &quot;digital rain&quot; effect, as seen on the computer monitors in &quot;The Matrix&quot;.[CR][CR]In its settings you can also define your own colors and sizes of rain.</description>
+    <description lang="es_ES">El efecto &quot;lluvia digital&quot;, como se ve en los monitores de ordenador en &quot;Matrix&quot;[CR][CR]En su configuración también puedes definir tus propios colores y tamaños de lluvia.</description>
+    <description lang="fi_FI">&quot;The Matrix&quot; -elokuvan tietokonenäytöiltä tuttu &quot;digitaalinen sade&quot; -tehoste.[CR][CR]Lisäosan asetuksista voit myös määrittää sateelle omat värit ja koot.</description>
     <description lang="zh_CN">“数字雨”效果，如影片《黑客帝国》中的计算机显示器所示。[CR][CR]在其设置中，您还可以定义自己的雨的颜色和大小。</description>
   </extension>
 </addon>
