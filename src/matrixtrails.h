@@ -51,6 +51,7 @@ protected:
   GLuint m_Texture;
 
 private:
+  GLuint m_vao = -1;
   GLuint m_vertexVBO = -1;
  
   GLint m_aPosition = -1;
