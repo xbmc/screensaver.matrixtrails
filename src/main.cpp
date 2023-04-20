@@ -33,7 +33,7 @@ public:
 
 private:
   std::unique_ptr<CMatrixTrails> m_matrixTrails;
-  CTimer* m_timer;
+  std::unique_ptr<CTimer> m_timer;
   CConfig m_config;
 };
 
@@ -42,7 +42,6 @@ private:
 // here and load any settings we may have from our config file
 //
 CScreensaverMatrixTrails::CScreensaverMatrixTrails()
-  : m_timer(nullptr)
 {
   m_config.SetDefaults();
   m_config.m_NumColumns = kodi::addon::GetSettingInt("columns");
@@ -65,7 +64,7 @@ bool CScreensaverMatrixTrails::Start()
 
   m_matrixTrails = std::make_unique<CMatrixTrails>(&m_config);
 
-  m_timer = new CTimer();
+  m_timer = std::make_unique<CTimer>();
   m_timer->Init();
   m_timer->SetSpeed(static_cast<f32>(kodi::addon::GetSettingInt("speed")));
   std::string path = kodi::addon::GetAddonPath() + "/resources/MatrixTrails.tga";
@@ -86,7 +85,6 @@ void CScreensaverMatrixTrails::Stop()
   if (!m_matrixTrails)
     return;
   m_matrixTrails->InvalidateDevice();
-  SAFE_DELETE(m_timer);
 }
 
 ////////////////////////////////////////////////////////////////////////////
