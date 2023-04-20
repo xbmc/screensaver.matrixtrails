@@ -12,6 +12,8 @@
 
 #include "column.h"
 
+#include <vector>
+
 /***************************** D E F I N E S *******************************/
 /****************************** M A C R O S ********************************/
 /***************************** C L A S S E S *******************************/
@@ -31,7 +33,7 @@ class ATTR_DLL_LOCAL CMatrixTrails : public kodi::gui::gl::CShaderProgram
 {
 public:
   CMatrixTrails(CConfig* config);
-  ~CMatrixTrails();
+  ~CMatrixTrails() = default;
 
   bool RestoreDevice(const std::string& path);
   void InvalidateDevice();
@@ -45,7 +47,7 @@ public:
 protected:
   int m_NumColumns;
   int m_NumRows;
-  CColumn* m_Columns;
+  std::vector<CColumn> m_Columns;
   CVector m_CharSize, m_CharSizeTex;
 
   GLuint m_Texture;
