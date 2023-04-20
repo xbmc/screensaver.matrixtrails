@@ -13,17 +13,8 @@
 ////////////////////////////////////////////////////////////////////////////
 //
 CColumn::CColumn()
-  : m_Chars(nullptr),
-    m_NumChars(0)
-
+  : m_NumChars(0)
 {
-}
-
-////////////////////////////////////////////////////////////////////////////
-//
-CColumn::~CColumn()
-{
-  SAFE_DELETE_ARRAY(m_Chars);
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -35,7 +26,7 @@ void CColumn::Init(CConfig* config, int numChars)
   m_FadeSpeed = RandFloat(m_config->m_FadeSpeedMin, m_config->m_FadeSpeedMax);
   m_CurChar = 0;
   m_NumChars = numChars;
-  m_Chars = new CChar[m_NumChars];
+  m_Chars.resize(m_NumChars);
 
   int startChar = Rand(m_NumChars);
   for (int i=0; i<startChar; i++)
