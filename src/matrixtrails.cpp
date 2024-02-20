@@ -21,18 +21,11 @@ CMatrixTrails::CMatrixTrails(CConfig* config)
   m_NumColumns = m_config->m_NumColumns;
   m_NumRows = m_config->m_NumRows;
 
-  m_Columns = new CColumn[m_NumColumns];
-  for (int cNr=0; cNr<m_NumColumns; cNr++)
+  m_Columns.resize(m_NumColumns);
+  for (auto& column : m_Columns)
   {
-    m_Columns[cNr].Init(m_config, m_NumRows);
+    column.Init(m_config, m_NumRows);
   }
-}
-
-////////////////////////////////////////////////////////////////////////////
-//
-CMatrixTrails::~CMatrixTrails()
-{
-  SAFE_DELETE_ARRAY(m_Columns);
 }
 
 ////////////////////////////////////////////////////////////////////////////

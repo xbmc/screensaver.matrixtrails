@@ -13,6 +13,8 @@
 #include <kodi/addon-instance/Screensaver.h>
 #include <kodi/gui/gl/GL.h>
 
+#include <memory>
+
 #include <time.h>
 #include <string.h>
 
@@ -30,8 +32,8 @@ public:
   virtual void Render() override;
 
 private:
-  CMatrixTrails* m_matrixTrails;
-  CTimer* m_timer;
+  std::unique_ptr<CMatrixTrails> m_matrixTrails;
+  std::unique_ptr<CTimer> m_timer;
   CConfig m_config;
 };
 
@@ -40,8 +42,6 @@ private:
 // here and load any settings we may have from our config file
 //
 CScreensaverMatrixTrails::CScreensaverMatrixTrails()
-  : m_matrixTrails(nullptr),
-    m_timer(nullptr)
 {
   m_config.SetDefaults();
   m_config.m_NumColumns = kodi::addon::GetSettingInt("columns");
@@ -61,10 +61,10 @@ CScreensaverMatrixTrails::CScreensaverMatrixTrails()
 bool CScreensaverMatrixTrails::Start()
 {
   srand((u32)time(null));
-  m_matrixTrails = new CMatrixTrails(&m_config);
-  if (!m_matrixTrails)
-    return false;
-  m_timer = new CTimer();
+
+  m_matrixTrails = std::make_unique<CMatrixTrails>(&m_config);
+
+  m_timer = std::make_unique<CTimer>();
   m_timer->Init();
   m_timer->SetSpeed(static_cast<f32>(kodi::addon::GetSettingInt("speed")));
   std::string path = kodi::addon::GetAddonPath() + "/resources/MatrixTrails.tga";
@@ -85,8 +85,6 @@ void CScreensaverMatrixTrails::Stop()
   if (!m_matrixTrails)
     return;
   m_matrixTrails->InvalidateDevice();
-  SAFE_DELETE(m_matrixTrails);
-  SAFE_DELETE(m_timer);
 }
 
 ////////////////////////////////////////////////////////////////////////////
