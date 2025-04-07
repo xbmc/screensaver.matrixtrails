@@ -5,132 +5,153 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Addons\n"
-"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/screensaver.matrixtrails/issues\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2025-04-07 06:15+0000\n"
-"Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
-"Language-Team: Swedish <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/screensaver-matrixtrails/sv_se/>\n"
-"Language: sv_se\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: prs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.4\n"
 
 msgctxt "Addon Summary"
 msgid "Matrix trails screensaver"
-msgstr "Matrix-spår skärmsläckare"
+msgstr ""
 
 msgctxt "Addon Description"
 msgid "The \"digital rain\" effect, as seen on the computer monitors in \"The Matrix\".[CR][CR]In its settings you can also define your own colors and sizes of rain."
-msgstr "Effekten ”digitalt regn”, som man ser på datorskärmarna i ”The Matrix”[CR][CR]I inställningarna kan du också definiera dina egna färger och storlekar på regnet."
+msgstr ""
 
 #. Slider to select amount of colums
+#: settings.xml
 msgctxt "#30000"
 msgid "Number of columns"
-msgstr "Antal kolumner"
+msgstr ""
 
 #. Slider to select amount of colums
+#: settings.xml
 msgctxt "#30001"
 msgid "Number of rows"
-msgstr "Antal rader"
+msgstr ""
 
 #. Spin to select speed
+#: settings.xml
 msgctxt "#30002"
 msgid "Speed"
-msgstr "Hastighet"
+msgstr ""
 
 #. Multiply value of selected speed
+#: settings.xml
 msgctxt "#30003"
 msgid "{0:d}x"
-msgstr "{0:d}x"
+msgstr ""
 
 #. Slider help to select amount of colums on 30000
+#: settings.xml
 msgctxt "#30004"
 msgid "Number of columns to show on screen."
-msgstr "Antal kolumner att visa på skärmen."
+msgstr ""
 
 #. Slider help to select amount of colums on 30001
+#: settings.xml
 msgctxt "#30005"
 msgid "Number of rows to show on screen."
-msgstr "Antal rader att visa på skärmen."
+msgstr ""
 
 #. Spin help to select speed on 30002
+#: settings.xml
 msgctxt "#30006"
 msgid "Accelerate how fast lines move down."
-msgstr "Öka hastigheten på hur snabbt raderna flyttas nedåt."
+msgstr ""
 
 #. Category name
+#: settings.xml
 msgctxt "#30010"
 msgid "Colors"
-msgstr "Färger"
+msgstr ""
 
 #. Group name
+#: settings.xml
 msgctxt "#30011"
 msgid "Matrix raining"
-msgstr "Matrix-regn"
+msgstr ""
 
 #. Slider
+#: settings.xml
 msgctxt "#30012"
 msgid "Red"
-msgstr "Röd"
+msgstr ""
 
 #. Slider help
+#: settings.xml
 msgctxt "#30013"
 msgid "Strength of red color in the rain."
-msgstr "Styrkan i den röda färgen i regnet."
+msgstr ""
 
 #. Slider
+#: settings.xml
 msgctxt "#30014"
 msgid "Green"
-msgstr "Grön"
+msgstr ""
 
 #. Slider help
+#: settings.xml
 msgctxt "#30015"
 msgid "Strength of green color in the rain."
-msgstr "Styrkan i den gröna färgen i regnet."
+msgstr ""
 
 #. Slider
+#: settings.xml
 msgctxt "#30016"
 msgid "Blue"
-msgstr "Blå"
+msgstr ""
 
 #. Slider help
+#: settings.xml
 msgctxt "#30017"
 msgid "Strength of blue color in the rain."
-msgstr "Styrkan i den blåa färgen i regnet."
+msgstr ""
 
 #. Group name
+#: settings.xml
 msgctxt "#30018"
 msgid "Matrix rain event"
-msgstr "Matrix-regnhändelse"
+msgstr ""
 
 #. Slider
+#: settings.xml
 msgctxt "#30019"
 msgid "Red"
-msgstr "Röd"
+msgstr ""
 
 #. Slider help
+#: settings.xml
 msgctxt "#30020"
 msgid "Strength of red color on a event."
-msgstr "Styrkan i den röda färgen vid en händelse."
+msgstr ""
 
 #. Slider
+#: settings.xml
 msgctxt "#30021"
 msgid "Green"
-msgstr "Grön"
+msgstr ""
 
 #. Slider help
+#: settings.xml
 msgctxt "#30022"
 msgid "Strength of green color on a event."
-msgstr "Styrkan i den gröna färgen vid en händelse."
+msgstr ""
 
 #. Slider
+#: settings.xml
 msgctxt "#30023"
 msgid "Blue"
-msgstr "Blå"
+msgstr ""
 
 #. Slider help
+#: settings.xml
 msgctxt "#30024"
 msgid "Strength of blue color on a event."
-msgstr "Styrkan i den blåa färgen vid en händelse."
+msgstr ""
