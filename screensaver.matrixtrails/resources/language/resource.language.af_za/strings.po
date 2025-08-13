@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KODI Addons\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2025-01-22 06:27+0000\n"
+"PO-Revision-Date: 2025-08-13 02:30+0000\n"
 "Last-Translator: Heiko Berner <berner.h@gmail.com>\n"
 "Language-Team: Afrikaans (South Africa) <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/screensaver-matrixtrails/af_za/>\n"
 "Language: af_za\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.9.2\n"
+"X-Generator: Weblate 5.12.2\n"
 
 msgctxt "Addon Summary"
 msgid "Matrix trails screensaver"
@@ -63,7 +63,7 @@ msgstr ""
 #. Category name
 msgctxt "#30010"
 msgid "Colors"
-msgstr ""
+msgstr "Kleure"
 
 #. Group name
 msgctxt "#30011"
@@ -73,7 +73,7 @@ msgstr ""
 #. Slider
 msgctxt "#30012"
 msgid "Red"
-msgstr ""
+msgstr "Rooi"
 
 #. Slider help
 msgctxt "#30013"
@@ -83,7 +83,7 @@ msgstr ""
 #. Slider
 msgctxt "#30014"
 msgid "Green"
-msgstr ""
+msgstr "Groen"
 
 #. Slider help
 msgctxt "#30015"
@@ -93,7 +93,7 @@ msgstr ""
 #. Slider
 msgctxt "#30016"
 msgid "Blue"
-msgstr ""
+msgstr "Blou"
 
 #. Slider help
 msgctxt "#30017"
