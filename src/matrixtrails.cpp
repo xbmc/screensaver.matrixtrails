@@ -41,6 +41,10 @@ bool CMatrixTrails::RestoreDevice(const std::string& path)
   if (!LoadShaderFiles(vertShader, fraqShader) || !CompileAndLink())
     return false;
 
+#if defined(HAS_GL)
+  glGenVertexArrays(1, &m_vao);
+#endif
+
   glGenBuffers(1, &m_vertexVBO);
 
   m_Texture = SOIL_load_OGL_texture(path.c_str(), SOIL_LOAD_RGB, 0, 0);
@@ -54,6 +58,10 @@ void CMatrixTrails::InvalidateDevice()
 {
   glDeleteBuffers(1, &m_vertexVBO);
   m_vertexVBO = 0;
+
+#if defined(HAS_GL)
+  glDeleteVertexArrays(1, &m_vao);
+#endif
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -82,6 +90,10 @@ bool CMatrixTrails::Draw()
     posX += m_CharSize.x;
   }
 
+#if defined(HAS_GL)
+  glBindVertexArray(m_vao);
+#endif
+
   EnableShader();
 
   glBindBuffer(GL_ARRAY_BUFFER, m_vertexVBO);
@@ -107,7 +119,13 @@ bool CMatrixTrails::Draw()
   glDisableVertexAttribArray(m_aColor);
   glDisableVertexAttribArray(m_aCoord);
 
+  glBindBuffer(GL_ARRAY_BUFFER, 0);
+
   DisableShader();
+
+#if defined(HAS_GL)
+  glBindVertexArray(m_vao);
+#endif
 
   return true;
 }
