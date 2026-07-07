@@ -22,6 +22,7 @@
       <screenshot>resources/screenshot-04.jpg</screenshot>
     </assets>
     <summary lang="bs_BA">Čuvar ekrana za tragove Matrixa</summary>
+    <summary lang="cs_CZ">Spořič obrazovky s deštěm Matrixu</summary>
     <summary lang="da_DK">Matrix Trails pauseskærm</summary>
     <summary lang="de_DE">Matrix Regen Bildschirmschoner</summary>
     <summary lang="en_GB">Matrix trails screensaver</summary>
@@ -32,6 +33,7 @@
     <summary lang="sv_SE">Matrix-spår skärmsläckare</summary>
     <summary lang="zh_CN">黑客帝国轨迹屏幕保护程序</summary>
     <description lang="bs_BA">Efekat &quot;digitalne kiše&quot;, kakav se vidi na monitorima računara u filmu &quot;Matrix&quot;.[CR][CR]U postavkama možete definirati i vlastite boje i veličine kiše.</description>
+    <description lang="cs_CZ">Efekt „digitálního deště“, jaký je vidět na počítačových monitorech ve filmu „Matrix“.[CR][CR]V jeho nastavení můžete určit také vlastní barvy a rozměry deště.</description>
     <description lang="da_DK">Den &quot;digitale regn&quot;-effekt, som ses på computerskærme i &quot;The Matrix&quot;.[CR][CR]I indstillingerne kan du også definere dine egne farver og størrelse på regnen.</description>
     <description lang="de_DE">Der &quot;digitale Regen&quot; Effekt, wie er auf den Computermonitoren in &quot;Matrix&quot; zu sehen ist.[CR][CR]In seinen Einstellungen kannst du auch eigene Farben und Größen des Regens bestimmen.</description>
     <description lang="en_GB">The &quot;digital rain&quot; effect, as seen on the computer monitors in &quot;The Matrix&quot;.[CR][CR]In its settings you can also define your own colors and sizes of rain.</description>
