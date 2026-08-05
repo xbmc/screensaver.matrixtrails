@@ -1,0 +1,63 @@
+From 26542a94bda3b74d6d16f8b0a85dab787e94b16b Mon Sep 17 00:00:00 2001
+From: Alwin Esch <alwin.esch@web.de>
+Date: Sun, 29 Mar 2026 23:15:15 +0200
+Subject: [PATCH] fix cmake build about zlib_bench if shared lib disabled
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+This select which library becomes used, in case no shared becomes the static linked to it.
+
+Further is the option with "ZLIB_BUILD_BENCHMARK" added to disable complete.
+
+Here a small compile error message where fixed with it:
+```
+zlib_bench.cc
+C:\Dev\10.addons\screensaver\screensaver.matrixtrails\build\build\zlib-chromium\src\zlib-chromium\contrib\bench\zlib_bench.cc(34): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "zlib.h": No such file or directory
+NMAKE : fatal error U1077: ""C:\Program Files\CMake\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\zlib_bench.dir\contrib\bench\zlib_bench.cc.obj.d --working-dir=C:\Dev\10.addons\screensaver\screensaver.matrixtrails\build\build\zlib-chromium\src\zlib-chromium-build --filter-prefix="Hinweis: Einlesen der Datei: " -- C:\PROGRA~1\MICROS~3\18\COMMUN~1\VC\Tools\MSVC\1450~1.357\bin\Hostx64\x64\cl.exe @C:\Users\alwin\AppData\Local\Temp\nm51E7.tmp": Rückgabe-Code "0x2"
+´´´
+---
+ CMakeLists.txt | 13 ++++++++-----
+ 1 file changed, 8 insertions(+), 5 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b569804..e087b01 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -22,6 +22,7 @@ set(CPACK_RESOURCE_FILE_README ${zlib_SOURCE_DIR}/README)
+ option(ZLIB_BUILD_TESTING "Enable Zlib Examples as tests" ON)
+ option(ZLIB_BUILD_SHARED "Enable building zlib shared library" ON)
+ option(ZLIB_BUILD_STATIC "Enable building zlib static library" ON)
++option(ZLIB_BUILD_BENCHMARK "Enable building benchmark application" ON)
+ option(ZLIB_INSTALL "Enable installation of zlib" ON)
+ option(ZLIB_PREFIX "prefix for all types and library functions, see zconf.h.in"
+        OFF)
+@@ -228,7 +229,7 @@ set(ZLIB_SRCS
+     uncompr.c
+     zutil.c)
+ 
+-if(WIN32)
++if(WIN32 AND ZLIB_BUILD_SHARED)
+     set(zlib_static_suffix "s")
+     set(CMAKE_DEBUG_POSTFIX "d")
+ endif(WIN32)
+@@ -440,10 +441,12 @@ endif(ZLIB_INSTALL)
+ #============================================================================
+ # Benchmarker
+ #============================================================================
+-enable_language(CXX)
+-set(CMAKE_CXX_STANDARD 14) # workaround for older compilers (e.g. g++ 5.4).
+-add_executable(zlib_bench contrib/bench/zlib_bench.cc)
+-target_link_libraries(zlib_bench zlib)
++if (ZLIB_BUILD_BENCHMARK)
++    enable_language(CXX)
++    set(CMAKE_CXX_STANDARD 14) # workaround for older compilers (e.g. g++ 5.4).
++    add_executable(zlib_bench contrib/bench/zlib_bench.cc)
++    target_link_libraries(zlib_bench $<IF:$<BOOL:${ZLIB_BUILD_SHARED}>,zlib,zlibstatic>)
++endif()
+ 
+ #============================================================================
+ # Unit Tests
+-- 
+2.51.0
+

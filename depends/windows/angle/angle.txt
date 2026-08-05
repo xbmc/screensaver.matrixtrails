@@ -1,1 +1,1 @@
-angle https://github.com/google/angle/archive/chromium/3712.tar.gz
+angle https://github.com/google/angle/archive/chromium/7258.tar.gz
