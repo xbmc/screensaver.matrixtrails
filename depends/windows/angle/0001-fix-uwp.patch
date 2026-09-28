@@ -1,12 +1,3 @@
-diff --git a/commit.h b/commit.h
-new file mode 100644
-index 0000000..654e023
---- /dev/null
-+++ b/commit.h
-@@ -0,0 +1,3 @@
-+#define ANGLE_COMMIT_HASH "invalid-hash"
-+#define ANGLE_COMMIT_HASH_SIZE 12
-+#define ANGLE_COMMIT_DATE "invalid-date"
 diff --git a/src/common/system_utils_win.cpp b/src/common/system_utils_win.cpp
 index 7db4485..04b6a85 100644
 --- a/src/common/system_utils_win.cpp
